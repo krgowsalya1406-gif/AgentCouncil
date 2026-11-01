@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AgentCouncil | Agent Debate</title>
+
+    <link rel="stylesheet"
+          href="agent-debate.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="debate-header">
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            <i class="fa-solid fa-brain"></i>
+        </div>
+
+        <div>
+            <strong>AgentCouncil</strong>
+            <small>Decision Intelligence</small>
+        </div>
+
+    </div>
+
+    <div class="debate-status">
+
+        <span class="debate-live">
+            <span></span>
+            LIVE DEBATE
+        </span>
+
+        <button id="dashboardBtn"
+                class="dashboard-button">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+        </button>
+
+    </div>
+
+</header>
+
+
+<main class="debate-main">
+
+    <!-- PAGE INTRO -->
+
+    <section class="debate-intro">
+
+        <div class="debate-badge">
+            <i class="fa-solid fa-comments"></i>
+            MULTI-AGENT DEBATE
+        </div>
+
+        <h1>
+            Let the Council
+            <span>Challenge the Decision</span>
+        </h1>
+
+        <p>
+            Each specialized agent presents its perspective,
+            challenges other viewpoints, and identifies
+            important trade-offs before a final decision is made.
+        </p>
+
+    </section>
+
+
+    <!-- PROBLEM -->
+
+    <section class="debate-problem">
+
+        <div class="problem-heading">
+
+            <div>
+                <span class="small-label">
+                    DECISION UNDER REVIEW
+                </span>
+
+                <h2 id="problemTitle">
+                    Loading problem...
+                </h2>
+            </div>
+
+            <span id="problemType"
+                  class="problem-type">
+                General
+            </span>
+
+        </div>
+
+        <p id="problemDescription">
+            Loading problem description...
+        </p>
+
+    </section>
+
+
+    <!-- DEBATE ARENA -->
+
+    <section class="debate-arena">
+
+        <div class="arena-header">
+
+            <div>
+                <span class="small-label">
+                    COUNCIL ARENA
+                </span>
+
+                <h2>Agent Perspectives</h2>
+            </div>
+
+            <div class="round-status">
+
+                <span>ROUND</span>
+
+                <strong id="roundNumber">
+                    1
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- CENTRAL DECISION -->
+
+        <div class="debate-stage">
+
+            <div class="stage-ring ring-one"></div>
+            <div class="stage-ring ring-two"></div>
+
+            <div class="decision-core">
+
+                <div class="core-icon">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+
+                <strong id="coreTitle">
+                    Council Debate
+                </strong>
+
+                <span id="coreStatus">
+                    Preparing perspectives...
+                </span>
+
+            </div>
+
+
+            <!-- AGENT SPEECH BUBBLES -->
+
+            <div class="debate-agent research-agent"
+                 data-agent="research">
+
+                <div class="speech-avatar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <div class="speech-card">
+
+                    <div class="speech-top">
+
+                        <strong>Research Agent</strong>
+
+                        <span class="speech-tag">
+                            EVIDENCE
+                        </span>
+
+                    </div>
+
+                    <p class="speech-text">
+                        Waiting for analysis...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="debate-agent budget-agent"
+                 data-agent="budget">
+
+                <div class="speech-avatar">
+                    <i class="fa-solid fa-coins"></i>
+                </div>
+
+                <div class="speech-card">
+
+                    <div class="speech-top">
+
+                        <strong>Budget Agent</strong>
+
+                        <span class="speech-tag">
+                            COST
+                        </span>
+
+                    </div>
+
+                    <p class="speech-text">
+                        Waiting for analysis...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="debate-agent risk-agent"
+                 data-agent="risk">
+
+                <div class="speech-avatar">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+
+                <div class="speech-card">
+
+                    <div class="speech-top">
+
+                        <strong>Risk Agent</strong>
+
+                        <span class="speech-tag">
+                            RISK
+                        </span>
+
+                    </div>
+
+                    <p class="speech-text">
+                        Waiting for analysis...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="debate-agent planning-agent"
+                 data-agent="planning">
+
+                <div class="speech-avatar">
+                    <i class="fa-solid fa-route"></i>
+                </div>
+
+                <div class="speech-card">
+
+                    <div class="speech-top">
+
+                        <strong>Planning Agent</strong>
+
+                        <span class="speech-tag">
+                            STRATEGY
+                        </span>
+
+                    </div>
+
+                    <p class="speech-text">
+                        Waiting for analysis...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="debate-agent resource-agent"
+                 data-agent="resource">
+
+                <div class="speech-avatar">
+                    <i class="fa-solid fa-cubes"></i>
+                </div>
+
+                <div class="speech-card">
+
+                    <div class="speech-top">
+
+                        <strong>Resource Agent</strong>
+
+                        <span class="speech-tag">
+                            RESOURCES
+                        </span>
+
+                    </div>
+
+                    <p class="speech-text">
+                        Waiting for analysis...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="debate-agent ethics-agent"
+                 data-agent="ethics">
+
+                <div class="speech-avatar">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+
+                <div class="speech-card">
+
+                    <div class="speech-top">
+
+                        <strong>Ethics Agent</strong>
+
+                        <span class="speech-tag">
+                            ETHICS
+                        </span>
+
+                    </div>
+
+                    <p class="speech-text">
+                        Waiting for analysis...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DEBATE PROGRESS -->
+
+    <section class="debate-progress-section">
+
+        <div class="progress-heading">
+
+            <div>
+                <span class="small-label">
+                    DEBATE PROGRESS
+                </span>
+
+                <h2 id="debateStatus">
+                    Initializing Debate
+                </h2>
+            </div>
+
+            <strong id="debatePercentage">
+                0%
+            </strong>
+
+        </div>
+
+        <div class="main-progress-track">
+
+            <div id="debateProgress"
+                 class="main-progress-bar">
+            </div>
+
+        </div>
+
+        <div class="debate-rounds">
+
+            <div class="round active"
+                 id="round1">
+                <span>01</span>
+                <small>Perspectives</small>
+            </div>
+
+            <div class="round"
+                 id="round2">
+                <span>02</span>
+                <small>Challenges</small>
+            </div>
+
+            <div class="round"
+                 id="round3">
+                <span>03</span>
+                <small>Consensus</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DEBATE LOG -->
+
+    <section class="debate-log-section">
+
+        <div class="log-title">
+
+            <div>
+                <span class="small-label">
+                    LIVE COUNCIL TRANSCRIPT
+                </span>
+
+                <h2>Debate Activity</h2>
+            </div>
+
+            <span class="live-tag">
+                LIVE
+            </span>
+
+        </div>
+
+        <div id="debateLog"
+             class="debate-log">
+
+            <div class="log-message">
+
+                <span class="log-time">
+                    --:--
+                </span>
+
+                <span class="log-dot"></span>
+
+                <span>
+                    Waiting for agents to enter the debate...
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONFLICT PREVIEW -->
+
+    <section class="conflict-preview"
+             id="conflictPreview">
+
+        <div class="conflict-icon">
+            <i class="fa-solid fa-code-branch"></i>
+        </div>
+
+        <div>
+
+            <span class="small-label">
+                NEXT INTELLIGENCE LAYER
+            </span>
+
+            <h2>Conflict Map</h2>
+
+            <p>
+                Visualize where agents agree, disagree,
+                and create decision trade-offs.
+            </p>
+
+        </div>
+
+        <button id="conflictBtn"
+                class="conflict-button">
+
+            View Conflict Map
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<script src="agent-debate.js"></script>
+
+</body>
+</html>

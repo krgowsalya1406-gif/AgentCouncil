@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgentCouncil | Conflict Map</title>
+
+    <link rel="stylesheet" href="conflict-map.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="conflict-header">
+
+    <div class="brand">
+        <div class="brand-logo">
+            <i class="fa-solid fa-brain"></i>
+        </div>
+
+        <div class="brand-text">
+            <strong>AgentCouncil</strong>
+            <small>Decision Intelligence</small>
+        </div>
+    </div>
+
+    <div class="header-actions">
+
+        <div class="live-status">
+            <span class="live-dot"></span>
+            CONFLICT ANALYSIS
+        </div>
+
+        <button id="dashboardBtn" class="dashboard-button">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+        </button>
+
+    </div>
+
+</header>
+
+
+<main class="conflict-main">
+
+    <!-- INTRO -->
+
+    <section class="conflict-intro">
+
+        <div class="intro-badge">
+            <i class="fa-solid fa-code-branch"></i>
+            DECISION CONFLICT MAP
+        </div>
+
+        <h1>
+            Where does the Council
+            <span>Agree & Disagree?</span>
+        </h1>
+
+        <p>
+            The Conflict Map compares every agent perspective to reveal
+            consensus, disagreements, competing priorities, and important
+            decision trade-offs.
+        </p>
+
+    </section>
+
+
+    <!-- PROBLEM SUMMARY -->
+
+    <section class="problem-summary">
+
+        <div class="summary-label">
+            <i class="fa-solid fa-crosshairs"></i>
+            DECISION UNDER ANALYSIS
+        </div>
+
+        <h2 id="problemTitle">
+            Loading problem...
+        </h2>
+
+        <div class="summary-meta">
+
+            <span id="problemType" class="type-badge">
+                General
+            </span>
+
+            <span class="summary-divider"></span>
+
+            <span id="problemStatus">
+                Debate Complete
+            </span>
+
+        </div>
+
+        <p id="problemDescription">
+            Loading problem description...
+        </p>
+
+    </section>
+
+
+    <!-- SCORE OVERVIEW -->
+
+    <section class="overview-grid">
+
+        <div class="metric-card consensus-card">
+
+            <div class="metric-icon">
+                <i class="fa-solid fa-handshake"></i>
+            </div>
+
+            <div class="metric-content">
+                <span>Consensus Level</span>
+                <strong id="consensusScore">82%</strong>
+                <small>Agents broadly aligned</small>
+            </div>
+
+            <div class="metric-ring">
+                <div class="ring-value" id="consensusRing">
+                    82
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="metric-card conflict-card">
+
+            <div class="metric-icon">
+                <i class="fa-solid fa-bolt"></i>
+            </div>
+
+            <div class="metric-content">
+                <span>Conflict Intensity</span>
+                <strong id="conflictScore">34%</strong>
+                <small>Moderate disagreement</small>
+            </div>
+
+            <div class="intensity-bar">
+                <div id="conflictBar"></div>
+            </div>
+
+        </div>
+
+
+        <div class="metric-card tradeoff-card">
+
+            <div class="metric-icon">
+                <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+
+            <div class="metric-content">
+                <span>Key Trade-offs</span>
+                <strong id="tradeoffCount">4</strong>
+                <small>Factors requiring attention</small>
+            </div>
+
+        </div>
+
+
+        <div class="metric-card agents-card">
+
+            <div class="metric-icon">
+                <i class="fa-solid fa-users"></i>
+            </div>
+
+            <div class="metric-content">
+                <span>Agents Compared</span>
+                <strong>6</strong>
+                <small>Independent perspectives</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONFLICT VISUALIZATION -->
+
+    <section class="map-section">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">
+                    COUNCIL RELATIONSHIP GRAPH
+                </span>
+
+                <h2>Agent Agreement Network</h2>
+
+                <p>
+                    Strong connections represent agreement.
+                    Warning connections indicate meaningful disagreement.
+                </p>
+            </div>
+
+            <div class="map-legend">
+
+                <span>
+                    <i class="legend-dot agreement"></i>
+                    Agreement
+                </span>
+
+                <span>
+                    <i class="legend-dot tension"></i>
+                    Tension
+                </span>
+
+                <span>
+                    <i class="legend-dot neutral"></i>
+                    Neutral
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="network-map">
+
+            <div class="network-grid"></div>
+
+            <div class="connection connection-1"></div>
+            <div class="connection connection-2"></div>
+            <div class="connection connection-3"></div>
+            <div class="connection connection-4"></div>
+            <div class="connection connection-5"></div>
+            <div class="connection connection-6"></div>
+
+            <!-- CENTER -->
+
+            <div class="network-core">
+
+                <div class="core-pulse"></div>
+
+                <div class="core-icon">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+
+                <strong>Decision</strong>
+
+                <span id="coreDecision">
+                    Under Review
+                </span>
+
+            </div>
+
+
+            <!-- RESEARCH -->
+
+            <div class="map-agent map-research" data-agent="research">
+
+                <div class="agent-node-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <strong>Research</strong>
+
+                <span class="agent-state agreement-state">
+                    Evidence
+                </span>
+
+            </div>
+
+
+            <!-- BUDGET -->
+
+            <div class="map-agent map-budget" data-agent="budget">
+
+                <div class="agent-node-icon">
+                    <i class="fa-solid fa-coins"></i>
+                </div>
+
+                <strong>Budget</strong>
+
+                <span class="agent-state tension-state">
+                    Cost
+                </span>
+
+            </div>
+
+
+            <!-- RISK -->
+
+            <div class="map-agent map-risk" data-agent="risk">
+
+                <div class="agent-node-icon">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                </div>
+
+                <strong>Risk</strong>
+
+                <span class="agent-state tension-state">
+                    Caution
+                </span>
+
+            </div>
+
+
+            <!-- PLANNING -->
+
+            <div class="map-agent map-planning" data-agent="planning">
+
+                <div class="agent-node-icon">
+                    <i class="fa-solid fa-route"></i>
+                </div>
+
+                <strong>Planning</strong>
+
+                <span class="agent-state agreement-state">
+                    Strategy
+                </span>
+
+            </div>
+
+
+            <!-- RESOURCE -->
+
+            <div class="map-agent map-resource" data-agent="resource">
+
+                <div class="agent-node-icon">
+                    <i class="fa-solid fa-cubes"></i>
+                </div>
+
+                <strong>Resource</strong>
+
+                <span class="agent-state neutral-state">
+                    Capacity
+                </span>
+
+            </div>
+
+
+            <!-- ETHICS -->
+
+            <div class="map-agent map-ethics" data-agent="ethics">
+
+                <div class="agent-node-icon">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+
+                <strong>Ethics</strong>
+
+                <span class="agent-state agreement-state">
+                    Fairness
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONFLICT MATRIX -->
+
+    <section class="matrix-section">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">
+                    AGENT COMPARISON
+                </span>
+
+                <h2>Conflict Matrix</h2>
+
+                <p>
+                    Compare how strongly each agent's priorities align with
+                    the other Council members.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="matrix-card">
+
+            <div class="matrix-scroll">
+
+                <table class="conflict-matrix">
+
+                    <thead>
+
+                    <tr>
+                        <th>AGENT</th>
+                        <th>Research</th>
+                        <th>Budget</th>
+                        <th>Risk</th>
+                        <th>Planning</th>
+                        <th>Resource</th>
+                        <th>Ethics</th>
+                    </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                    <tr>
+                        <th>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            Research
+                        </th>
+                        <td class="self">—</td>
+                        <td class="high">88%</td>
+                        <td class="medium">71%</td>
+                        <td class="high">91%</td>
+                        <td class="medium">76%</td>
+                        <td class="high">86%</td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            <i class="fa-solid fa-coins"></i>
+                            Budget
+                        </th>
+                        <td class="high">88%</td>
+                        <td class="self">—</td>
+                        <td class="low">48%</td>
+                        <td class="medium">67%</td>
+                        <td class="high">84%</td>
+                        <td class="medium">62%</td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            Risk
+                        </th>
+                        <td class="medium">71%</td>
+                        <td class="low">48%</td>
+                        <td class="self">—</td>
+                        <td class="medium">59%</td>
+                        <td class="medium">64%</td>
+                        <td class="high">82%</td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            <i class="fa-solid fa-route"></i>
+                            Planning
+                        </th>
+                        <td class="high">91%</td>
+                        <td class="medium">67%</td>
+                        <td class="medium">59%</td>
+                        <td class="self">—</td>
+                        <td class="high">89%</td>
+                        <td class="high">85%</td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            <i class="fa-solid fa-cubes"></i>
+                            Resource
+                        </th>
+                        <td class="medium">76%</td>
+                        <td class="high">84%</td>
+                        <td class="medium">64%</td>
+                        <td class="high">89%</td>
+                        <td class="self">—</td>
+                        <td class="medium">73%</td>
+                    </tr>
+
+                    <tr>
+                        <th>
+                            <i class="fa-solid fa-scale-balanced"></i>
+                            Ethics
+                        </th>
+                        <td class="high">86%</td>
+                        <td class="medium">62%</td>
+                        <td class="high">82%</td>
+                        <td class="high">85%</td>
+                        <td class="medium">73%</td>
+                        <td class="self">—</td>
+                    </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- KEY CONFLICTS -->
+
+    <section class="conflicts-section">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="section-label">
+                    INTELLIGENCE INSIGHTS
+                </span>
+
+                <h2>Key Decision Conflicts</h2>
+
+                <p>
+                    The Council identified the following areas where
+                    priorities compete.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="conflict-cards">
+
+            <article class="conflict-card">
+
+                <div class="conflict-card-icon">
+                    <i class="fa-solid fa-coins"></i>
+                </div>
+
+                <div class="conflict-card-content">
+
+                    <div class="conflict-card-title">
+                        <h3>Budget vs Risk</h3>
+                        <span class="conflict-level high-level">
+                            HIGH
+                        </span>
+                    </div>
+
+                    <p>
+                        Budget priorities favor lower spending, while the
+                        Risk Agent recommends additional safeguards that
+                        may increase the required investment.
+                    </p>
+
+                    <div class="conflict-agents">
+                        <span>Budget</span>
+                        <i class="fa-solid fa-arrows-left-right"></i>
+                        <span>Risk</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="conflict-card">
+
+                <div class="conflict-card-icon">
+                    <i class="fa-solid fa-clock"></i>
+                </div>
+
+                <div class="conflict-card-content">
+
+                    <div class="conflict-card-title">
+                        <h3>Speed vs Quality</h3>
+                        <span class="conflict-level medium-level">
+                            MEDIUM
+                        </span>
+                    </div>
+
+                    <p>
+                        Planning favors completing the decision quickly,
+                        while Research emphasizes sufficient evidence
+                        before implementation.
+                    </p>
+
+                    <div class="conflict-agents">
+                        <span>Planning</span>
+                        <i class="fa-solid fa-arrows-left-right"></i>
+                        <span>Research</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="conflict-card">
+
+                <div class="conflict-card-icon">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                </div>
+
+                <div class="conflict-card-content">
+
+                    <div class="conflict-card-title">
+                        <h3>Resources vs Ambition</h3>
+                        <span class="conflict-level medium-level">
+                            MEDIUM
+                        </span>
+                    </div>
+
+                    <p>
+                        The proposed plan may provide strong benefits,
+                        but Resource analysis indicates that available
+                        people, tools, and infrastructure must be checked.
+                    </p>
+
+                    <div class="conflict-agents">
+                        <span>Resource</span>
+                        <i class="fa-solid fa-arrows-left-right"></i>
+                        <span>Planning</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="conflict-card">
+
+                <div class="conflict-card-icon">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+
+                <div class="conflict-card-content">
+
+                    <div class="conflict-card-title">
+                        <h3>Efficiency vs Fairness</h3>
+                        <span class="conflict-level low-level">
+                            LOW
+                        </span>
+                    </div>
+
+                    <p>
+                        Efficiency can favor the fastest implementation,
+                        while the Ethics Agent requires transparent and
+                        fair access for affected participants.
+                    </p>
+
+                    <div class="conflict-agents">
+                        <span>Ethics</span>
+                        <i class="fa-solid fa-arrows-left-right"></i>
+                        <span>Planning</span>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- TRADE-OFF PANEL -->
+
+    <section class="tradeoff-section">
+
+        <div class="tradeoff-panel">
+
+            <div class="tradeoff-header">
+
+                <div class="tradeoff-icon">
+                    <i class="fa-solid fa-sliders"></i>
+                </div>
+
+                <div>
+                    <span class="section-label">
+                        DECISION TRADE-OFF ENGINE
+                    </span>
+
+                    <h2>What matters most?</h2>
+
+                    <p>
+                        These factors influence the Council's final
+                        recommendation.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="tradeoff-bars">
+
+                <div class="tradeoff-row">
+
+                    <div class="tradeoff-name">
+                        <span>Cost</span>
+                        <strong>75%</strong>
+                    </div>
+
+                    <div class="tradeoff-track">
+                        <div style="width:75%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="tradeoff-row">
+
+                    <div class="tradeoff-name">
+                        <span>Risk</span>
+                        <strong>68%</strong>
+                    </div>
+
+                    <div class="tradeoff-track">
+                        <div style="width:68%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="tradeoff-row">
+
+                    <div class="tradeoff-name">
+                        <span>Quality</span>
+                        <strong>86%</strong>
+                    </div>
+
+                    <div class="tradeoff-track">
+                        <div style="width:86%"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="tradeoff-row">
+
+                    <div class="tradeoff-name">
+                        <span>Time</span>
+                        <strong>61%</strong>
+                    </div>
+
+                    <div class="tradeoff-track">
+                        <div style="width:61%"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- NEXT STEP -->
+
+    <section class="next-section" id="nextSection">
+
+        <div class="next-icon">
+            <i class="fa-solid fa-flask"></i>
+        </div>
+
+        <div class="next-content">
+
+            <span class="section-label">
+                NEXT INTELLIGENCE LAYER
+            </span>
+
+            <h2>Test the Decision Before Making It</h2>
+
+            <p>
+                Change important assumptions and simulate how the Council's
+                decision could change under different conditions.
+            </p>
+
+        </div>
+
+        <button id="simulationBtn" class="simulation-button">
+            Open What-If Simulation
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+    </section>
+
+</main>
+
+
+<script src="conflict-map.js"></script>
+
+</body>
+</html>

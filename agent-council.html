@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgentCouncil | Council Analysis</title>
+
+    <link rel="stylesheet" href="agent-council.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================================
+         PAGE
+         ===================================================== -->
+
+    <div class="council-page">
+
+        <!-- =================================================
+             HEADER
+             ================================================= -->
+
+        <header class="council-header">
+
+            <div class="brand">
+
+                <div class="brand-logo">
+                    <i class="fa-solid fa-network-wired"></i>
+                </div>
+
+                <div>
+                    <h2>Agent<span>Council</span></h2>
+                    <p>Decision Intelligence</p>
+                </div>
+
+            </div>
+
+
+            <div class="header-status">
+
+                <span class="live-indicator"></span>
+
+                <span>
+                    COUNCIL ACTIVE
+                </span>
+
+            </div>
+
+
+            <button
+                class="dashboard-button"
+                id="dashboardBtn"
+            >
+                <i class="fa-solid fa-grid-2"></i>
+                Dashboard
+            </button>
+
+        </header>
+
+
+        <!-- =================================================
+             MAIN
+             ================================================= -->
+
+        <main class="council-main">
+
+
+            <!-- =================================================
+                 ANALYSIS HEADER
+                 ================================================= -->
+
+            <section class="analysis-header">
+
+                <div class="analysis-badge">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                    MULTI-AGENT ANALYSIS
+
+                </div>
+
+
+                <h1>
+                    Your problem is being
+                    <span>analyzed by the Council</span>
+                </h1>
+
+
+                <p>
+                    Six specialized agents are examining the problem
+                    from different decision perspectives.
+                </p>
+
+            </section>
+
+
+            <!-- =================================================
+                 PROBLEM SUMMARY
+                 ================================================= -->
+
+            <section class="problem-summary">
+
+                <div class="summary-top">
+
+                    <div>
+
+                        <span class="summary-label">
+                            CURRENT PROBLEM
+                        </span>
+
+                        <h2 id="problemTitle">
+                            Loading problem...
+                        </h2>
+
+                    </div>
+
+
+                    <div
+                        class="problem-type"
+                        id="problemType"
+                    >
+                        General
+                    </div>
+
+                </div>
+
+
+                <div class="problem-description">
+
+                    <i class="fa-solid fa-quote-left"></i>
+
+                    <p id="problemDescription">
+                        Loading problem description...
+                    </p>
+
+                </div>
+
+
+                <div class="problem-factors">
+
+                    <span>
+                        <i class="fa-solid fa-sliders"></i>
+                        Key Factors
+                    </span>
+
+                    <div id="factorList">
+                        <small>No factors selected</small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 COUNCIL VISUAL
+                 ================================================= -->
+
+            <section class="council-visual-section">
+
+                <div class="council-orbit">
+
+                    <div class="orbit orbit-one"></div>
+
+                    <div class="orbit orbit-two"></div>
+
+                    <div class="orbit orbit-three"></div>
+
+
+                    <!-- CORE -->
+
+                    <div class="council-core">
+
+                        <div class="core-pulse"></div>
+
+                        <i class="fa-solid fa-brain"></i>
+
+                        <strong>
+                            COUNCIL
+                        </strong>
+
+                        <span id="coreStatus">
+                            INITIALIZING
+                        </span>
+
+                    </div>
+
+
+                    <!-- AGENT NODES -->
+
+                    <div class="agent-node node-research">
+
+                        <div class="node-icon">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+
+                        <span>Research</span>
+
+                    </div>
+
+
+                    <div class="agent-node node-budget">
+
+                        <div class="node-icon">
+                            <i class="fa-solid fa-coins"></i>
+                        </div>
+
+                        <span>Budget</span>
+
+                    </div>
+
+
+                    <div class="agent-node node-risk">
+
+                        <div class="node-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <span>Risk</span>
+
+                    </div>
+
+
+                    <div class="agent-node node-planning">
+
+                        <div class="node-icon">
+                            <i class="fa-solid fa-route"></i>
+                        </div>
+
+                        <span>Planning</span>
+
+                    </div>
+
+
+                    <div class="agent-node node-resource">
+
+                        <div class="node-icon">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                        </div>
+
+                        <span>Resources</span>
+
+                    </div>
+
+
+                    <div class="agent-node node-ethics">
+
+                        <div class="node-icon">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+
+                        <span>Ethics</span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 AGENT STATUS
+                 ================================================= -->
+
+            <section class="agents-section">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span>
+                            SPECIALIST AGENTS
+                        </span>
+
+                        <h2>
+                            Council Activity
+                        </h2>
+
+                    </div>
+
+
+                    <div class="analysis-progress">
+
+                        <span id="progressText">
+                            0 / 6 Active
+                        </span>
+
+                        <div class="progress-track">
+
+                            <div
+                                class="progress-bar"
+                                id="progressBar"
+                            ></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="agent-grid">
+
+
+                    <!-- RESEARCH -->
+
+                    <div
+                        class="agent-card"
+                        data-agent="research"
+                    >
+
+                        <div class="agent-card-icon research">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+
+                        <div class="agent-card-content">
+
+                            <div class="agent-name-row">
+
+                                <h3>Research Agent</h3>
+
+                                <span class="agent-status waiting">
+                                    Waiting
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Examines evidence, information
+                                and relevant knowledge.
+                            </p>
+
+                            <div class="agent-progress">
+
+                                <div class="agent-progress-track">
+                                    <div class="agent-progress-bar"></div>
+                                </div>
+
+                                <span>0%</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BUDGET -->
+
+                    <div
+                        class="agent-card"
+                        data-agent="budget"
+                    >
+
+                        <div class="agent-card-icon budget">
+                            <i class="fa-solid fa-coins"></i>
+                        </div>
+
+                        <div class="agent-card-content">
+
+                            <div class="agent-name-row">
+
+                                <h3>Budget Agent</h3>
+
+                                <span class="agent-status waiting">
+                                    Waiting
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Examines financial constraints,
+                                costs and trade-offs.
+                            </p>
+
+                            <div class="agent-progress">
+
+                                <div class="agent-progress-track">
+                                    <div class="agent-progress-bar"></div>
+                                </div>
+
+                                <span>0%</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RISK -->
+
+                    <div
+                        class="agent-card"
+                        data-agent="risk"
+                    >
+
+                        <div class="agent-card-icon risk">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <div class="agent-card-content">
+
+                            <div class="agent-name-row">
+
+                                <h3>Risk Agent</h3>
+
+                                <span class="agent-status waiting">
+                                    Waiting
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Identifies threats, uncertainty
+                                and possible failure scenarios.
+                            </p>
+
+                            <div class="agent-progress">
+
+                                <div class="agent-progress-track">
+                                    <div class="agent-progress-bar"></div>
+                                </div>
+
+                                <span>0%</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PLANNING -->
+
+                    <div
+                        class="agent-card"
+                        data-agent="planning"
+                    >
+
+                        <div class="agent-card-icon planning">
+                            <i class="fa-solid fa-route"></i>
+                        </div>
+
+                        <div class="agent-card-content">
+
+                            <div class="agent-name-row">
+
+                                <h3>Planning Agent</h3>
+
+                                <span class="agent-status waiting">
+                                    Waiting
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Develops possible strategies,
+                                actions and execution paths.
+                            </p>
+
+                            <div class="agent-progress">
+
+                                <div class="agent-progress-track">
+                                    <div class="agent-progress-bar"></div>
+                                </div>
+
+                                <span>0%</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RESOURCE -->
+
+                    <div
+                        class="agent-card"
+                        data-agent="resource"
+                    >
+
+                        <div class="agent-card-icon resource">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                        </div>
+
+                        <div class="agent-card-content">
+
+                            <div class="agent-name-row">
+
+                                <h3>Resource Agent</h3>
+
+                                <span class="agent-status waiting">
+                                    Waiting
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Evaluates available resources,
+                                capacity and allocation.
+                            </p>
+
+                            <div class="agent-progress">
+
+                                <div class="agent-progress-track">
+                                    <div class="agent-progress-bar"></div>
+                                </div>
+
+                                <span>0%</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ETHICS -->
+
+                    <div
+                        class="agent-card"
+                        data-agent="ethics"
+                    >
+
+                        <div class="agent-card-icon ethics">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+
+                        <div class="agent-card-content">
+
+                            <div class="agent-name-row">
+
+                                <h3>Ethics Agent</h3>
+
+                                <span class="agent-status waiting">
+                                    Waiting
+                                </span>
+
+                            </div>
+
+                            <p>
+                                Examines fairness, safety and
+                                responsible decision considerations.
+                            </p>
+
+                            <div class="agent-progress">
+
+                                <div class="agent-progress-track">
+                                    <div class="agent-progress-bar"></div>
+                                </div>
+
+                                <span>0%</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 LIVE ANALYSIS LOG
+                 ================================================= -->
+
+            <section class="analysis-log-card">
+
+                <div class="log-header">
+
+                    <div>
+
+                        <span>
+                            LIVE REASONING PIPELINE
+                        </span>
+
+                        <h2>
+                            Council Activity Log
+                        </h2>
+
+                    </div>
+
+                    <div class="live-label">
+                        <span></span>
+                        LIVE
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="analysis-log"
+                    id="analysisLog"
+                >
+
+                    <div class="log-item">
+
+                        <span class="log-time">
+                            --:--
+                        </span>
+
+                        <div class="log-dot"></div>
+
+                        <p>
+                            Initializing Council...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 NEXT STEP
+                 ================================================= -->
+
+            <section
+                class="next-section"
+                id="nextSection"
+            >
+
+                <div class="completion-icon">
+
+                    <i class="fa-solid fa-scale-balanced"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        ANALYSIS COMPLETE
+                    </span>
+
+                    <h2>
+                        Council perspectives are ready
+                    </h2>
+
+                    <p>
+                        Review how the agents reached their
+                        perspectives and examine disagreements
+                        before moving toward a decision.
+                    </p>
+
+                </div>
+
+                <button
+                    id="debateBtn"
+                    class="debate-button"
+                >
+                    Continue to Agent Debate
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="agent-council.js"></script>
+
+</body>
+
+</html>

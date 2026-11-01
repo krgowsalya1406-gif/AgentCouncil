@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgentCouncil | Dashboard</title>
+
+    <link rel="stylesheet" href="dashboard.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <div class="dashboard">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <div class="sidebar-brand">
+
+                <div class="sidebar-logo">
+                    <i class="fa-solid fa-network-wired"></i>
+                </div>
+
+                <div>
+                    <h2>Agent<span>Council</span></h2>
+                    <p>Decision Intelligence</p>
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav class="sidebar-nav">
+
+                <p class="nav-label">WORKSPACE</p>
+
+                <button class="nav-item active">
+                    <i class="fa-solid fa-grid-2"></i>
+                    <span>Dashboard</span>
+                </button>
+
+                <button class="nav-item">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>New Problem</span>
+                </button>
+
+                <button class="nav-item">
+                    <i class="fa-solid fa-users-viewfinder"></i>
+                    <span>Agent Council</span>
+                </button>
+
+                <button class="nav-item">
+                    <i class="fa-solid fa-comments"></i>
+                    <span>Agent Debate</span>
+                </button>
+
+                <button class="nav-item">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <span>Conflict Map</span>
+                </button>
+
+                <p class="nav-label">INTELLIGENCE</p>
+
+                <button class="nav-item">
+                    <i class="fa-solid fa-flask"></i>
+                    <span>What-If Simulation</span>
+                </button>
+
+                <button class="nav-item">
+                    <i class="fa-solid fa-brain"></i>
+                    <span>Decision Memory</span>
+                </button>
+
+                <button class="nav-item">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Prediction vs Reality</span>
+                </button>
+
+                <button class="nav-item">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>Decision History</span>
+                </button>
+
+            </nav>
+
+
+            <!-- Sidebar Bottom -->
+
+            <div class="sidebar-bottom">
+
+                <button class="nav-item">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <span>Help</span>
+                </button>
+
+                <button class="nav-item logout-item" id="logoutBtn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN CONTENT ================= -->
+
+        <main class="main-content">
+
+
+            <!-- TOP BAR -->
+
+            <header class="topbar">
+
+                <div class="page-heading">
+
+                    <p class="small-heading">
+                        DECISION INTELLIGENCE WORKSPACE
+                    </p>
+
+                    <h1>Good morning, <span id="userName">Gowsalya</span></h1>
+
+                    <p>
+                        Bring a complex problem. Let the council analyze it.
+                    </p>
+
+                </div>
+
+
+                <div class="topbar-actions">
+
+                    <button class="icon-button" id="notificationBtn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-dot"></span>
+                    </button>
+
+                    <div class="user-profile">
+
+                        <div class="profile-avatar" id="profileInitial">
+                            G
+                        </div>
+
+                        <div class="profile-info">
+
+                            <strong id="profileName">
+                                Gowsalya
+                            </strong>
+
+                            <span>
+                                Decision Maker
+                            </span>
+
+                        </div>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- ================= DASHBOARD CONTENT ================= -->
+
+            <section class="dashboard-content">
+
+
+                <!-- HERO COMMAND CARD -->
+
+                <div class="command-card">
+
+                    <div class="command-background"></div>
+
+                    <div class="command-content">
+
+                        <div class="command-badge">
+                            <span class="live-dot"></span>
+                            COUNCIL READY
+                        </div>
+
+                        <h2>
+                            What decision are you
+                            <span>facing today?</span>
+                        </h2>
+
+                        <p>
+                            Describe your problem and AgentCouncil will
+                            identify the relevant dimensions, activate
+                            specialized agents, and prepare the issue
+                            for collaborative analysis.
+                        </p>
+
+
+                        <button
+                            class="primary-action"
+                            id="newProblemBtn"
+                        >
+                            <i class="fa-solid fa-plus"></i>
+                            Start New Problem
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="command-visual">
+
+                        <div class="mini-orbit">
+
+                            <div class="mini-core">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+
+                            <span class="mini-node node-a">
+                                <i class="fa-solid fa-coins"></i>
+                            </span>
+
+                            <span class="mini-node node-b">
+                                <i class="fa-solid fa-shield"></i>
+                            </span>
+
+                            <span class="mini-node node-c">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </span>
+
+                            <span class="mini-node node-d">
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= STATS ================= -->
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon purple">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+
+                        <div>
+                            <span>Problems Analyzed</span>
+                            <strong id="statProblems">0</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon cyan">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+
+                        <div>
+                            <span>Decisions Made</span>
+                            <strong id="statDecisions">0</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon green">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+
+                        <div>
+                            <span>Lessons Learned</span>
+                            <strong id="statLearning">0</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon orange">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+
+                        <div>
+                            <span>Active Agents</span>
+                            <strong>6</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= TWO COLUMN AREA ================= -->
+
+                <div class="dashboard-grid">
+
+
+                    <!-- RECENT DECISIONS -->
+
+                    <div class="dashboard-card recent-card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <p class="card-label">MEMORY</p>
+                                <h3>Recent Decisions</h3>
+                            </div>
+
+                            <button class="text-button">
+                                View All
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+
+                        <div id="recentDecisions">
+
+                            <div class="empty-state">
+
+                                <div class="empty-icon">
+                                    <i class="fa-solid fa-clock-rotate-left"></i>
+                                </div>
+
+                                <h4>No decisions yet</h4>
+
+                                <p>
+                                    Your council decisions will appear here.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- COUNCIL STATUS -->
+
+                    <div class="dashboard-card">
+
+                        <div class="card-header">
+
+                            <div>
+                                <p class="card-label">LIVE SYSTEM</p>
+                                <h3>Council Status</h3>
+                            </div>
+
+                            <span class="status-online">
+                                <span></span>
+                                ONLINE
+                            </span>
+
+                        </div>
+
+
+                        <div class="agent-status-list">
+
+                            <div class="agent-status">
+                                <div class="agent-status-icon">
+                                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Research Agent</strong>
+                                    <span>Ready</span>
+                                </div>
+
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+
+
+                            <div class="agent-status">
+                                <div class="agent-status-icon">
+                                    <i class="fa-solid fa-coins"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Budget Agent</strong>
+                                    <span>Ready</span>
+                                </div>
+
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+
+
+                            <div class="agent-status">
+                                <div class="agent-status-icon">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Risk Agent</strong>
+                                    <span>Ready</span>
+                                </div>
+
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+
+
+                            <div class="agent-status">
+                                <div class="agent-status-icon">
+                                    <i class="fa-solid fa-list-check"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Planning Agent</strong>
+                                    <span>Ready</span>
+                                </div>
+
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+
+
+                            <div class="agent-status">
+                                <div class="agent-status-icon">
+                                    <i class="fa-solid fa-boxes-stacked"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Resource Agent</strong>
+                                    <span>Ready</span>
+                                </div>
+
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+
+
+                            <div class="agent-status">
+                                <div class="agent-status-icon">
+                                    <i class="fa-solid fa-scale-balanced"></i>
+                                </div>
+
+                                <div>
+                                    <strong>Ethics Agent</strong>
+                                    <span>Ready</span>
+                                </div>
+
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= QUICK START ================= -->
+
+                <div class="dashboard-card quick-start">
+
+                    <div class="card-header">
+
+                        <div>
+                            <p class="card-label">QUICK START</p>
+                            <h3>Choose a Problem Type</h3>
+                        </div>
+
+                    </div>
+
+
+                    <div class="problem-types">
+
+                        <button class="problem-type">
+                            <i class="fa-solid fa-coins"></i>
+                            <span>
+                                <strong>Budget</strong>
+                                <small>Financial constraints</small>
+                            </span>
+                        </button>
+
+
+                        <button class="problem-type">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            <span>
+                                <strong>Risk</strong>
+                                <small>Threats & uncertainty</small>
+                            </span>
+                        </button>
+
+
+                        <button class="problem-type">
+                            <i class="fa-solid fa-route"></i>
+                            <span>
+                                <strong>Planning</strong>
+                                <small>Strategy & execution</small>
+                            </span>
+                        </button>
+
+
+                        <button class="problem-type">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                            <span>
+                                <strong>Resources</strong>
+                                <small>Availability & allocation</small>
+                            </span>
+                        </button>
+
+
+                        <button class="problem-type">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span>
+                                <strong>Research</strong>
+                                <small>Evidence & information</small>
+                            </span>
+                        </button>
+
+
+                        <button class="problem-type">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                            <span>
+                                <strong>Ethics</strong>
+                                <small>Fairness & safety</small>
+                            </span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- DASHBOARD JAVASCRIPT -->
+
+    <script src="dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>AgentCouncil | Decision History</title>
+
+    <link
+        rel="stylesheet"
+        href="decision-history.css"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="history-header">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+
+            <div class="brand-text">
+                <h2>AgentCouncil</h2>
+                <span>Decision Intelligence</span>
+            </div>
+
+        </div>
+
+
+        <div class="header-actions">
+
+            <div class="history-status">
+                <span class="status-dot"></span>
+                MEMORY ONLINE
+            </div>
+
+            <button
+                id="dashboardBtn"
+                type="button"
+            >
+                <i class="fa-solid fa-grid-2"></i>
+                Dashboard
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="history-main">
+
+
+        <!-- INTRO -->
+
+        <section class="history-intro">
+
+            <div class="intro-badge">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                Decision History
+            </div>
+
+            <h1>
+                Every Decision Leaves a Trail
+            </h1>
+
+            <p>
+                Review previous problems, council analysis,
+                debates, simulations, outcomes and learning
+                captured by AgentCouncil.
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             CURRENT DECISION
+        ================================================== -->
+
+        <section class="current-decision">
+
+            <div class="current-heading">
+
+                <div>
+                    <span class="section-label">
+                        CURRENT DECISION
+                    </span>
+
+                    <h2 id="currentTitle">
+                        Loading decision...
+                    </h2>
+
+                    <p id="currentDescription">
+                        Loading decision details...
+                    </p>
+                </div>
+
+                <div class="current-status">
+                    <span id="currentType">
+                        GENERAL
+                    </span>
+
+                    <span id="currentStatus">
+                        COMPLETED
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- FLOW -->
+
+            <div class="decision-flow">
+
+                <div class="flow-step completed">
+
+                    <div class="flow-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+
+                    <div>
+                        <strong>Problem</strong>
+                        <span>Defined</span>
+                    </div>
+
+                </div>
+
+
+                <div class="flow-line"></div>
+
+
+                <div class="flow-step completed">
+
+                    <div class="flow-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div>
+                        <strong>Council</strong>
+                        <span>Analyzed</span>
+                    </div>
+
+                </div>
+
+
+                <div class="flow-line"></div>
+
+
+                <div class="flow-step completed">
+
+                    <div class="flow-icon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+
+                    <div>
+                        <strong>Debate</strong>
+                        <span>Completed</span>
+                    </div>
+
+                </div>
+
+
+                <div class="flow-line"></div>
+
+
+                <div class="flow-step completed">
+
+                    <div class="flow-icon">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+
+                    <div>
+                        <strong>Conflict</strong>
+                        <span>Mapped</span>
+                    </div>
+
+                </div>
+
+
+                <div class="flow-line"></div>
+
+
+                <div class="flow-step completed">
+
+                    <div class="flow-icon">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+
+                    <div>
+                        <strong>Simulation</strong>
+                        <span>Tested</span>
+                    </div>
+
+                </div>
+
+
+                <div class="flow-line"></div>
+
+
+                <div class="flow-step completed">
+
+                    <div class="flow-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+
+                    <div>
+                        <strong>Learning</strong>
+                        <span>Stored</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             STATISTICS
+        ================================================== -->
+
+        <section class="history-stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">
+                    <i class="fa-solid fa-list-check"></i>
+                </div>
+
+                <div>
+                    <span class="stat-label">
+                        TOTAL PROBLEMS
+                    </span>
+
+                    <strong id="totalProblems">
+                        0
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon cyan">
+                    <i class="fa-solid fa-gavel"></i>
+                </div>
+
+                <div>
+                    <span class="stat-label">
+                        DECISIONS
+                    </span>
+
+                    <strong id="totalDecisions">
+                        0
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon green">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+
+                <div>
+                    <span class="stat-label">
+                        LEARNING RECORDS
+                    </span>
+
+                    <strong id="totalLearning">
+                        0
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon yellow">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+
+                <div>
+                    <span class="stat-label">
+                        AVG ACCURACY
+                    </span>
+
+                    <strong id="averageAccuracy">
+                        0%
+                    </strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SEARCH / FILTER
+        ================================================== -->
+
+        <section class="history-controls">
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search previous decisions..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <select id="typeFilter">
+
+                <option value="all">
+                    All Types
+                </option>
+
+                <option value="Budget">
+                    Budget
+                </option>
+
+                <option value="Risk">
+                    Risk
+                </option>
+
+                <option value="Planning">
+                    Planning
+                </option>
+
+                <option value="Resources">
+                    Resources
+                </option>
+
+                <option value="Research">
+                    Research
+                </option>
+
+                <option value="Ethics">
+                    Ethics
+                </option>
+
+            </select>
+
+
+            <select id="statusFilter">
+
+                <option value="all">
+                    All Status
+                </option>
+
+                <option value="completed">
+                    Completed
+                </option>
+
+                <option value="learning">
+                    Learning
+                </option>
+
+                <option value="memory">
+                    Memory Saved
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <!-- =================================================
+             HISTORY LIST
+        ================================================== -->
+
+        <section class="history-list-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">
+                        DECISION ARCHIVE
+                    </span>
+
+                    <h2>
+                        Previous Decisions
+                    </h2>
+                </div>
+
+                <span id="resultCount">
+                    0 decisions
+                </span>
+
+            </div>
+
+
+            <div
+                id="historyList"
+                class="history-list"
+            >
+
+                <!-- JavaScript inserts history cards -->
+
+            </div>
+
+
+            <div
+                id="emptyState"
+                class="empty-state"
+            >
+
+                <div class="empty-icon">
+                    <i class="fa-solid fa-folder-open"></i>
+                </div>
+
+                <h3>
+                    No Decisions Found
+                </h3>
+
+                <p>
+                    Your completed decisions will appear here
+                    after you analyze a problem.
+                </p>
+
+                <button
+                    id="newDecisionBtn"
+                    type="button"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                    Create New Decision
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SELECTED DECISION DETAILS
+        ================================================== -->
+
+        <section
+            id="decisionDetails"
+            class="decision-details"
+        >
+
+            <div class="details-header">
+
+                <div>
+
+                    <span class="section-label">
+                        DECISION INSIGHT
+                    </span>
+
+                    <h2 id="detailsTitle">
+                        Select a decision
+                    </h2>
+
+                </div>
+
+                <button
+                    id="closeDetailsBtn"
+                    type="button"
+                >
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <div class="details-grid">
+
+                <!-- Council -->
+
+                <div class="detail-card">
+
+                    <div class="detail-card-icon purple">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            COUNCIL ANALYSIS
+                        </span>
+
+                        <strong id="detailsAgents">
+                            0 Agents
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Debate -->
+
+                <div class="detail-card">
+
+                    <div class="detail-card-icon cyan">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            DEBATE
+                        </span>
+
+                        <strong id="detailsDebate">
+                            0 Rounds
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Conflict -->
+
+                <div class="detail-card">
+
+                    <div class="detail-card-icon red">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            CONFLICT
+                        </span>
+
+                        <strong id="detailsConflict">
+                            0%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Simulation -->
+
+                <div class="detail-card">
+
+                    <div class="detail-card-icon green">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            SIMULATION
+                        </span>
+
+                        <strong id="detailsSimulation">
+                            0%
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Learning -->
+
+            <div class="details-learning">
+
+                <div class="learning-heading">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                    <div>
+                        <h3>
+                            What the System Learned
+                        </h3>
+
+                        <p>
+                            Insights recorded from this decision.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="detailsLearning"
+                    class="learning-content"
+                >
+                    No learning record available.
+                </div>
+
+            </div>
+
+
+            <!-- Outcome -->
+
+            <div class="details-outcome">
+
+                <div class="outcome-column">
+
+                    <span>
+                        PREDICTED
+                    </span>
+
+                    <strong id="detailsPredicted">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="outcome-arrow">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+
+
+                <div class="outcome-column">
+
+                    <span>
+                        ACTUAL
+                    </span>
+
+                    <strong id="detailsActual">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="accuracy-column">
+
+                    <span>
+                        LEARNING ACCURACY
+                    </span>
+
+                    <strong id="detailsAccuracy">
+                        —%
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             FINAL ACTION
+        ================================================== -->
+
+        <section class="next-section">
+
+            <div class="next-content">
+
+                <div class="next-icon">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+
+                <div>
+
+                    <h3>
+                        Ready to Analyze Another Problem?
+                    </h3>
+
+                    <p>
+                        Start a new decision cycle with the
+                        AgentCouncil.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button
+                id="newProblemBtn"
+                type="button"
+            >
+                <i class="fa-solid fa-plus"></i>
+                New Problem
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div
+        id="toast"
+        class="toast"
+    >
+
+        <div class="toast-icon">
+            <i class="fa-solid fa-check"></i>
+        </div>
+
+        <div class="toast-content">
+
+            <strong id="toastTitle">
+                Decision Loaded
+            </strong>
+
+            <p id="toastMessage">
+                Decision details loaded successfully.
+            </p>
+
+        </div>
+
+        <button
+            id="closeToast"
+            type="button"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+
+    <script src="decision-history.js"></script>
+
+</body>
+</html>

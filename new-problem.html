@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgentCouncil | New Problem</title>
+
+    <link rel="stylesheet" href="new-problem.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- ================= PAGE ================= -->
+
+    <div class="problem-page">
+
+        <!-- ================= TOP BAR ================= -->
+
+        <header class="problem-header">
+
+            <div class="brand">
+
+                <div class="brand-logo">
+                    <i class="fa-solid fa-network-wired"></i>
+                </div>
+
+                <div>
+                    <h2>Agent<span>Council</span></h2>
+                    <p>Decision Intelligence</p>
+                </div>
+
+            </div>
+
+            <button class="back-button" id="backDashboard">
+                <i class="fa-solid fa-arrow-left"></i>
+                Dashboard
+            </button>
+
+        </header>
+
+
+        <!-- ================= MAIN ================= -->
+
+        <main class="problem-main">
+
+            <!-- INTRO -->
+
+            <section class="intro-section">
+
+                <div class="intro-badge">
+                    <span></span>
+                    COUNCIL INTAKE
+                </div>
+
+                <h1>
+                    What problem are you
+                    <span>trying to solve?</span>
+                </h1>
+
+                <p>
+                    Describe the situation in your own words.
+                    AgentCouncil will break the problem into
+                    decision dimensions and activate the relevant
+                    specialist agents.
+                </p>
+
+            </section>
+
+
+            <!-- ================= PROBLEM CARD ================= -->
+
+            <section class="problem-card">
+
+                <!-- STEP HEADER -->
+
+                <div class="step-header">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <div>
+                        <span>PROBLEM INTAKE</span>
+                        <h2>Describe your decision</h2>
+                    </div>
+
+                </div>
+
+
+                <!-- PROBLEM TYPE -->
+
+                <div class="form-group">
+
+                    <label>
+                        Problem Type
+                    </label>
+
+                    <div class="type-selector">
+
+                        <button
+                            class="type-option"
+                            data-type="Budget"
+                        >
+                            <i class="fa-solid fa-coins"></i>
+
+                            <span>
+                                <strong>Budget</strong>
+                                <small>Financial decisions</small>
+                            </span>
+                        </button>
+
+
+                        <button
+                            class="type-option"
+                            data-type="Risk"
+                        >
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                            <span>
+                                <strong>Risk</strong>
+                                <small>Threats & uncertainty</small>
+                            </span>
+                        </button>
+
+
+                        <button
+                            class="type-option"
+                            data-type="Planning"
+                        >
+                            <i class="fa-solid fa-route"></i>
+
+                            <span>
+                                <strong>Planning</strong>
+                                <small>Strategy & execution</small>
+                            </span>
+                        </button>
+
+
+                        <button
+                            class="type-option"
+                            data-type="Resources"
+                        >
+                            <i class="fa-solid fa-boxes-stacked"></i>
+
+                            <span>
+                                <strong>Resources</strong>
+                                <small>Allocation & availability</small>
+                            </span>
+                        </button>
+
+
+                        <button
+                            class="type-option"
+                            data-type="Research"
+                        >
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+
+                            <span>
+                                <strong>Research</strong>
+                                <small>Evidence & information</small>
+                            </span>
+                        </button>
+
+
+                        <button
+                            class="type-option"
+                            data-type="Ethics"
+                        >
+                            <i class="fa-solid fa-scale-balanced"></i>
+
+                            <span>
+                                <strong>Ethics</strong>
+                                <small>Fairness & safety</small>
+                            </span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROBLEM TITLE -->
+
+                <div class="form-group">
+
+                    <label for="problemTitle">
+                        Problem Title
+                    </label>
+
+                    <input
+                        type="text"
+                        id="problemTitle"
+                        placeholder="Example: Should we expand our college project?"
+                        maxlength="100"
+                    >
+
+                    <div class="character-count">
+                        <span id="titleCount">0</span>/100
+                    </div>
+
+                </div>
+
+
+                <!-- PROBLEM DESCRIPTION -->
+
+                <div class="form-group">
+
+                    <label for="problemDescription">
+                        Describe the Problem
+                    </label>
+
+                    <textarea
+                        id="problemDescription"
+                        rows="7"
+                        maxlength="1000"
+                        placeholder="Explain the situation, what you need to decide, the constraints you are facing, and any important information..."
+                    ></textarea>
+
+                    <div class="textarea-footer">
+
+                        <span>
+                            Be specific. More context helps the council analyze the situation.
+                        </span>
+
+                        <span id="descriptionCount">
+                            0/1000
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= CONSTRAINTS ================= -->
+
+                <div class="form-group">
+
+                    <label>
+                        What matters most?
+                    </label>
+
+                    <p class="helper-text">
+                        Select the factors that should influence the decision.
+                    </p>
+
+                    <div class="factor-grid">
+
+                        <label class="factor-option">
+                            <input
+                                type="checkbox"
+                                value="Cost"
+                            >
+                            <span>
+                                <i class="fa-solid fa-indian-rupee-sign"></i>
+                                Cost
+                            </span>
+                        </label>
+
+
+                        <label class="factor-option">
+                            <input
+                                type="checkbox"
+                                value="Time"
+                            >
+                            <span>
+                                <i class="fa-solid fa-clock"></i>
+                                Time
+                            </span>
+                        </label>
+
+
+                        <label class="factor-option">
+                            <input
+                                type="checkbox"
+                                value="Risk"
+                            >
+                            <span>
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                                Risk
+                            </span>
+                        </label>
+
+
+                        <label class="factor-option">
+                            <input
+                                type="checkbox"
+                                value="Quality"
+                            >
+                            <span>
+                                <i class="fa-solid fa-star"></i>
+                                Quality
+                            </span>
+                        </label>
+
+
+                        <label class="factor-option">
+                            <input
+                                type="checkbox"
+                                value="Resources"
+                            >
+                            <span>
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                                Resources
+                            </span>
+                        </label>
+
+
+                        <label class="factor-option">
+                            <input
+                                type="checkbox"
+                                value="Safety"
+                            >
+                            <span>
+                                <i class="fa-solid fa-shield"></i>
+                                Safety
+                            </span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= OPTIONS ================= -->
+
+                <div class="form-group">
+
+                    <label for="deadline">
+                        Decision Deadline
+                        <span class="optional">Optional</span>
+                    </label>
+
+                    <input
+                        type="date"
+                        id="deadline"
+                    >
+
+                </div>
+
+
+                <!-- ================= ACTION ================= -->
+
+                <div class="form-actions">
+
+                    <button
+                        class="secondary-button"
+                        id="cancelBtn"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        class="analyze-button"
+                        id="analyzeBtn"
+                    >
+
+                        <span>
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            Analyze Problem
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= HOW IT WORKS ================= -->
+
+            <section class="process-section">
+
+                <div class="process-title">
+
+                    <span>WHAT HAPPENS NEXT?</span>
+
+                    <h2>
+                        Your problem goes through the Council
+                    </h2>
+
+                </div>
+
+
+                <div class="process-grid">
+
+                    <div class="process-card">
+
+                        <div class="process-icon">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+
+                        <span>01</span>
+
+                        <h3>Understand</h3>
+
+                        <p>
+                            The system identifies the key dimensions
+                            and constraints of your problem.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-line"></div>
+
+
+                    <div class="process-card">
+
+                        <div class="process-icon">
+                            <i class="fa-solid fa-users-viewfinder"></i>
+                        </div>
+
+                        <span>02</span>
+
+                        <h3>Activate Agents</h3>
+
+                        <p>
+                            Relevant specialist agents are selected
+                            for the problem.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-line"></div>
+
+
+                    <div class="process-card">
+
+                        <div class="process-icon">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+
+                        <span>03</span>
+
+                        <h3>Debate</h3>
+
+                        <p>
+                            Agents examine the problem from
+                            different perspectives.
+                        </p>
+
+                    </div>
+
+
+                    <div class="process-line"></div>
+
+
+                    <div class="process-card">
+
+                        <div class="process-icon">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+
+                        <span>04</span>
+
+                        <h3>Decision</h3>
+
+                        <p>
+                            Conflicts, risks and possible outcomes
+                            are presented for your review.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="new-problem.js"></script>
+
+</body>
+
+</html>

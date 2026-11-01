@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgentCouncil | Decision Memory</title>
+
+    <link rel="stylesheet" href="decision-memory.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="memory-header">
+
+        <div class="brand">
+            <div class="brand-logo">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+
+            <div class="brand-text">
+                <h1>AgentCouncil</h1>
+                <span>Decision Intelligence</span>
+            </div>
+        </div>
+
+        <div class="header-actions">
+
+            <div class="memory-status">
+                <span class="status-dot"></span>
+                MEMORY ENGINE ACTIVE
+            </div>
+
+            <button class="dashboard-button" id="dashboardBtn">
+                <i class="fa-solid fa-grid-2"></i>
+                Dashboard
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="memory-main">
+
+        <!-- INTRO -->
+        <section class="memory-intro">
+
+            <div class="intro-badge">
+                <i class="fa-solid fa-database"></i>
+                DECISION MEMORY
+            </div>
+
+            <h2>Store What the Council Learned</h2>
+
+            <p>
+                Convert the Council's analysis, debate, conflicts and
+                simulations into a reusable decision memory.
+            </p>
+
+        </section>
+
+
+        <!-- PROBLEM CARD -->
+        <section class="problem-card">
+
+            <div class="problem-card-top">
+
+                <div class="problem-icon">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+
+                <div class="problem-heading">
+
+                    <span class="section-label">
+                        CURRENT PROBLEM
+                    </span>
+
+                    <h3 id="problemTitle">
+                        Loading problem...
+                    </h3>
+
+                    <div class="problem-meta">
+
+                        <span class="type-badge" id="problemType">
+                            General
+                        </span>
+
+                        <span class="status-badge" id="problemStatus">
+                            Processing
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="problem-description" id="problemDescription">
+                Loading problem description...
+            </p>
+
+        </section>
+
+
+        <!-- SNAPSHOT -->
+        <section class="snapshot-section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-kicker">
+                        MEMORY SNAPSHOT
+                    </span>
+
+                    <h2>Decision Intelligence Collected</h2>
+                </div>
+            </div>
+
+
+            <div class="snapshot-grid">
+
+                <div class="snapshot-card">
+
+                    <div class="snapshot-icon purple">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <div class="snapshot-content">
+                        <span>Council Agents</span>
+                        <strong id="agentCount">6</strong>
+                        <small>Perspectives analyzed</small>
+                    </div>
+
+                </div>
+
+
+                <div class="snapshot-card">
+
+                    <div class="snapshot-icon cyan">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+
+                    <div class="snapshot-content">
+                        <span>Debate Rounds</span>
+                        <strong id="debateCount">3</strong>
+                        <small>Challenge cycles</small>
+                    </div>
+
+                </div>
+
+
+                <div class="snapshot-card">
+
+                    <div class="snapshot-icon orange">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+
+                    <div class="snapshot-content">
+                        <span>Conflicts</span>
+                        <strong id="conflictCount">0</strong>
+                        <small>Trade-offs identified</small>
+                    </div>
+
+                </div>
+
+
+                <div class="snapshot-card">
+
+                    <div class="snapshot-icon green">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+
+                    <div class="snapshot-content">
+                        <span>Simulations</span>
+                        <strong id="simulationCount">0</strong>
+                        <small>What-if scenarios</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MEMORY TIMELINE -->
+        <section class="timeline-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-kicker">
+                        DECISION JOURNEY
+                    </span>
+
+                    <h2>What the Council Remembered</h2>
+                </div>
+
+            </div>
+
+
+            <div class="memory-timeline">
+
+                <!-- STEP 1 -->
+                <div class="timeline-item completed">
+
+                    <div class="timeline-marker">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <div class="timeline-top">
+                            <div>
+                                <span class="timeline-number">
+                                    STEP 01
+                                </span>
+
+                                <h3>Problem Context</h3>
+                            </div>
+
+                            <span class="complete-label">
+                                <i class="fa-solid fa-check"></i>
+                                Captured
+                            </span>
+                        </div>
+
+                        <p>
+                            The original problem, objective, constraints,
+                            deadline and decision factors were captured.
+                        </p>
+
+                        <div class="timeline-tags" id="factorTags">
+                            <span>Cost</span>
+                            <span>Time</span>
+                            <span>Risk</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 2 -->
+                <div class="timeline-item completed">
+
+                    <div class="timeline-marker">
+                        <i class="fa-solid fa-users-viewfinder"></i>
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <div class="timeline-top">
+
+                            <div>
+                                <span class="timeline-number">
+                                    STEP 02
+                                </span>
+
+                                <h3>Council Analysis</h3>
+                            </div>
+
+                            <span class="complete-label">
+                                <i class="fa-solid fa-check"></i>
+                                Analyzed
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Six specialized agents examined the problem
+                            from different decision perspectives.
+                        </p>
+
+                        <div class="agent-mini-grid">
+
+                            <span>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                Research
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-coins"></i>
+                                Budget
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-shield-halved"></i>
+                                Risk
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-route"></i>
+                                Planning
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                                Resource
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-scale-balanced"></i>
+                                Ethics
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 3 -->
+                <div class="timeline-item completed">
+
+                    <div class="timeline-marker">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <div class="timeline-top">
+
+                            <div>
+                                <span class="timeline-number">
+                                    STEP 03
+                                </span>
+
+                                <h3>Agent Debate</h3>
+                            </div>
+
+                            <span class="complete-label">
+                                <i class="fa-solid fa-check"></i>
+                                Debated
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Agents challenged each other's assumptions and
+                            exchanged supporting and opposing perspectives.
+                        </p>
+
+                        <div class="insight-box">
+
+                            <i class="fa-solid fa-quote-left"></i>
+
+                            <span id="debateInsight">
+                                Multiple perspectives were compared before
+                                reaching a potential consensus.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 4 -->
+                <div class="timeline-item completed">
+
+                    <div class="timeline-marker">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <div class="timeline-top">
+
+                            <div>
+                                <span class="timeline-number">
+                                    STEP 04
+                                </span>
+
+                                <h3>Conflict Map</h3>
+                            </div>
+
+                            <span class="complete-label">
+                                <i class="fa-solid fa-check"></i>
+                                Mapped
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Areas of agreement, disagreement and important
+                            trade-offs were identified.
+                        </p>
+
+                        <div class="conflict-summary">
+
+                            <div>
+                                <span>Consensus</span>
+                                <strong id="memoryConsensus">--%</strong>
+                            </div>
+
+                            <div>
+                                <span>Conflict</span>
+                                <strong id="memoryConflict">--%</strong>
+                            </div>
+
+                            <div>
+                                <span>Trade-offs</span>
+                                <strong id="memoryTradeoffs">--</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STEP 5 -->
+                <div class="timeline-item completed">
+
+                    <div class="timeline-marker">
+                        <i class="fa-solid fa-flask-vial"></i>
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <div class="timeline-top">
+
+                            <div>
+                                <span class="timeline-number">
+                                    STEP 05
+                                </span>
+
+                                <h3>What-If Simulation</h3>
+                            </div>
+
+                            <span class="complete-label">
+                                <i class="fa-solid fa-check"></i>
+                                Simulated
+                            </span>
+
+                        </div>
+
+                        <p>
+                            Alternative conditions were tested to understand
+                            how changes could affect the decision outcome.
+                        </p>
+
+                        <div class="simulation-memory">
+
+                            <div class="simulation-score">
+                                <span>Last Confidence</span>
+                                <strong id="memoryConfidence">--%</strong>
+                            </div>
+
+                            <div class="simulation-score">
+                                <span>Risk</span>
+                                <strong id="memoryRisk">--%</strong>
+                            </div>
+
+                            <div class="simulation-score">
+                                <span>Impact</span>
+                                <strong id="memoryImpact">--%</strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- KEY LEARNINGS -->
+        <section class="learning-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-kicker">
+                        LEARNING LAYER
+                    </span>
+
+                    <h2>Key Decision Learnings</h2>
+
+                    <p>
+                        Important observations that can be reused in future
+                        decision-making.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="learning-grid" id="learningGrid">
+
+                <div class="learning-card">
+
+                    <div class="learning-number">
+                        01
+                    </div>
+
+                    <div>
+                        <h3>Balance Multiple Factors</h3>
+
+                        <p>
+                            Decisions should consider cost, time, resources,
+                            risk and expected impact together.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="learning-card">
+
+                    <div class="learning-number">
+                        02
+                    </div>
+
+                    <div>
+                        <h3>Challenge Assumptions</h3>
+
+                        <p>
+                            Different agent perspectives can expose risks
+                            that may not appear in an initial analysis.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="learning-card">
+
+                    <div class="learning-number">
+                        03
+                    </div>
+
+                    <div>
+                        <h3>Test Before Deciding</h3>
+
+                        <p>
+                            What-if scenarios help understand how changing
+                            important conditions may affect the outcome.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ASSUMPTIONS -->
+        <section class="assumption-section">
+
+            <div class="assumption-card">
+
+                <div class="assumption-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+
+                <div class="assumption-content">
+
+                    <span class="section-kicker">
+                        DECISION ASSUMPTIONS
+                    </span>
+
+                    <h2>What Should We Remember?</h2>
+
+                    <p>
+                        These factors were considered during the analysis
+                        and can influence future decisions.
+                    </p>
+
+                    <div class="assumption-tags" id="assumptionTags">
+                        <span>Cost</span>
+                        <span>Time</span>
+                        <span>Risk</span>
+                        <span>Quality</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SAVE MEMORY -->
+        <section class="save-section">
+
+            <div class="save-card">
+
+                <div class="save-icon">
+                    <i class="fa-solid fa-floppy-disk"></i>
+                </div>
+
+                <div class="save-content">
+
+                    <span class="section-kicker">
+                        READY TO REMEMBER
+                    </span>
+
+                    <h2>Save This Decision Memory</h2>
+
+                    <p>
+                        Store the complete decision journey so it can be
+                        referenced later.
+                    </p>
+
+                </div>
+
+                <button class="save-memory-button" id="saveMemoryBtn">
+
+                    <i class="fa-solid fa-database"></i>
+
+                    Save to Memory
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- SAVED MEMORIES -->
+        <section class="history-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-kicker">
+                        MEMORY VAULT
+                    </span>
+
+                    <h2>Previously Saved Decisions</h2>
+                </div>
+
+                <span class="memory-count" id="memoryCount">
+                    0 memories
+                </span>
+
+            </div>
+
+
+            <div class="memory-history" id="memoryHistory">
+
+                <div class="empty-memory">
+
+                    <div class="empty-icon">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+
+                    <h3>No saved memories yet</h3>
+
+                    <p>
+                        Save this decision to create your first reusable
+                        decision memory.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- NEXT -->
+        <section class="next-section" id="nextSection">
+
+            <div class="next-icon">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+            <div class="next-content">
+
+                <span class="section-kicker">
+                    NEXT STAGE
+                </span>
+
+                <h2>Turn Memory Into a Final Decision</h2>
+
+                <p>
+                    Use everything collected by the Council to prepare the
+                    final decision and compare it with future outcomes.
+                </p>
+
+            </div>
+
+            <button class="final-button" id="finalDecisionBtn">
+
+                Continue
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+
+        <div class="toast-icon">
+            <i class="fa-solid fa-check"></i>
+        </div>
+
+        <div class="toast-content">
+
+            <strong id="toastTitle">
+                Memory Saved
+            </strong>
+
+            <span id="toastMessage">
+                Decision memory has been stored successfully.
+            </span>
+
+        </div>
+
+        <button id="closeToast">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+
+    <script src="decision-memory.js"></script>
+
+</body>
+</html>

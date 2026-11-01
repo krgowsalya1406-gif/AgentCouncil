@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgentCouncil | What-If Simulation</title>
+
+    <link rel="stylesheet" href="simulation.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="simulation-header">
+
+    <div class="brand">
+
+        <div class="brand-logo">
+            <i class="fa-solid fa-brain"></i>
+        </div>
+
+        <div class="brand-text">
+            <strong>AgentCouncil</strong>
+            <small>Decision Intelligence</small>
+        </div>
+
+    </div>
+
+    <div class="header-actions">
+
+        <div class="simulation-status">
+            <span class="status-dot"></span>
+            WHAT-IF ENGINE ACTIVE
+        </div>
+
+        <button id="dashboardBtn" class="dashboard-button">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+        </button>
+
+    </div>
+
+</header>
+
+
+<main class="simulation-main">
+
+
+    <!-- INTRO -->
+
+    <section class="simulation-intro">
+
+        <div class="intro-badge">
+            <i class="fa-solid fa-flask"></i>
+            COUNTERFACTUAL DECISION SIMULATION
+        </div>
+
+        <h1>
+            What happens if
+            <span>the situation changes?</span>
+        </h1>
+
+        <p>
+            Change important assumptions and let the Council simulate
+            how the decision, risks, costs, and expected impact could change.
+        </p>
+
+    </section>
+
+
+    <!-- CURRENT PROBLEM -->
+
+    <section class="problem-card">
+
+        <div class="problem-card-top">
+
+            <div>
+
+                <span class="section-label">
+                    BASELINE DECISION
+                </span>
+
+                <h2 id="problemTitle">
+                    Loading problem...
+                </h2>
+
+            </div>
+
+            <span id="problemType" class="problem-type">
+                General
+            </span>
+
+        </div>
+
+        <p id="problemDescription">
+            Loading problem description...
+        </p>
+
+    </section>
+
+
+    <!-- SIMULATION WORKSPACE -->
+
+    <section class="simulation-workspace">
+
+
+        <!-- LEFT CONTROL PANEL -->
+
+        <div class="control-panel">
+
+            <div class="panel-heading">
+
+                <div class="panel-icon">
+                    <i class="fa-solid fa-sliders"></i>
+                </div>
+
+                <div>
+                    <span class="section-label">
+                        SCENARIO CONTROLS
+                    </span>
+
+                    <h2>Change Variables</h2>
+                </div>
+
+            </div>
+
+
+            <!-- BUDGET -->
+
+            <div class="control-item">
+
+                <div class="control-title">
+
+                    <div>
+                        <i class="fa-solid fa-coins"></i>
+                        <span>Available Budget</span>
+                    </div>
+
+                    <strong id="budgetValue">
+                        70%
+                    </strong>
+
+                </div>
+
+                <input
+                    type="range"
+                    id="budgetSlider"
+                    min="10"
+                    max="100"
+                    value="70"
+                >
+
+                <div class="range-labels">
+                    <span>Limited</span>
+                    <span>High</span>
+                </div>
+
+            </div>
+
+
+            <!-- TIME -->
+
+            <div class="control-item">
+
+                <div class="control-title">
+
+                    <div>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Available Time</span>
+                    </div>
+
+                    <strong id="timeValue">
+                        60%
+                    </strong>
+
+                </div>
+
+                <input
+                    type="range"
+                    id="timeSlider"
+                    min="10"
+                    max="100"
+                    value="60"
+                >
+
+                <div class="range-labels">
+                    <span>Urgent</span>
+                    <span>Flexible</span>
+                </div>
+
+            </div>
+
+
+            <!-- RESOURCES -->
+
+            <div class="control-item">
+
+                <div class="control-title">
+
+                    <div>
+                        <i class="fa-solid fa-cubes"></i>
+                        <span>Resource Availability</span>
+                    </div>
+
+                    <strong id="resourceValue">
+                        75%
+                    </strong>
+
+                </div>
+
+                <input
+                    type="range"
+                    id="resourceSlider"
+                    min="10"
+                    max="100"
+                    value="75"
+                >
+
+                <div class="range-labels">
+                    <span>Low</span>
+                    <span>High</span>
+                </div>
+
+            </div>
+
+
+            <!-- RISK -->
+
+            <div class="control-item">
+
+                <div class="control-title">
+
+                    <div>
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span>Risk Level</span>
+                    </div>
+
+                    <strong id="riskValue">
+                        30%
+                    </strong>
+
+                </div>
+
+                <input
+                    type="range"
+                    id="riskSlider"
+                    min="0"
+                    max="100"
+                    value="30"
+                >
+
+                <div class="range-labels">
+                    <span>Low Risk</span>
+                    <span>High Risk</span>
+                </div>
+
+            </div>
+
+
+            <!-- QUALITY -->
+
+            <div class="control-item">
+
+                <div class="control-title">
+
+                    <div>
+                        <i class="fa-solid fa-star"></i>
+                        <span>Expected Quality</span>
+                    </div>
+
+                    <strong id="qualityValue">
+                        80%
+                    </strong>
+
+                </div>
+
+                <input
+                    type="range"
+                    id="qualitySlider"
+                    min="10"
+                    max="100"
+                    value="80"
+                >
+
+                <div class="range-labels">
+                    <span>Basic</span>
+                    <span>Excellent</span>
+                </div>
+
+            </div>
+
+
+            <button id="runSimulationBtn" class="run-button">
+
+                <i class="fa-solid fa-play"></i>
+
+                Run What-If Simulation
+
+            </button>
+
+
+            <button id="resetSimulationBtn" class="reset-button">
+
+                <i class="fa-solid fa-rotate-left"></i>
+
+                Reset Scenario
+
+            </button>
+
+        </div>
+
+
+        <!-- RIGHT RESULTS -->
+
+        <div class="results-panel">
+
+            <div class="results-header">
+
+                <div>
+
+                    <span class="section-label">
+                        SIMULATION OUTPUT
+                    </span>
+
+                    <h2 id="simulationTitle">
+                        Baseline Scenario
+                    </h2>
+
+                </div>
+
+                <div id="simulationState" class="simulation-state">
+                    READY
+                </div>
+
+            </div>
+
+
+            <!-- SCORE CARDS -->
+
+            <div class="result-grid">
+
+                <div class="result-card">
+
+                    <div class="result-icon">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+
+                    <span>Decision Confidence</span>
+
+                    <strong id="confidenceScore">
+                        82%
+                    </strong>
+
+                    <div class="result-progress">
+                        <div id="confidenceBar"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <div class="result-icon risk-result">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <span>Risk Exposure</span>
+
+                    <strong id="riskScore">
+                        30%
+                    </strong>
+
+                    <div class="result-progress">
+                        <div id="riskResultBar"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <div class="result-icon impact-result">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                    <span>Expected Impact</span>
+
+                    <strong id="impactScore">
+                        78%
+                    </strong>
+
+                    <div class="result-progress">
+                        <div id="impactBar"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <div class="result-icon alignment-result">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <span>Agent Alignment</span>
+
+                    <strong id="alignmentScore">
+                        84%
+                    </strong>
+
+                    <div class="result-progress">
+                        <div id="alignmentBar"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SCENARIO COMPARISON -->
+
+            <div class="comparison-card">
+
+                <div class="comparison-heading">
+
+                    <div>
+                        <span class="section-label">
+                            BASELINE VS SIMULATION
+                        </span>
+
+                        <h3>Decision Sensitivity</h3>
+                    </div>
+
+                    <span id="scenarioChange">
+                        No changes yet
+                    </span>
+
+                </div>
+
+
+                <div class="comparison-row">
+
+                    <span>Confidence</span>
+
+                    <div class="comparison-track">
+
+                        <div
+                            id="baselineConfidence"
+                            class="baseline-bar">
+                        </div>
+
+                        <div
+                            id="simulatedConfidence"
+                            class="simulation-bar">
+                        </div>
+
+                    </div>
+
+                    <strong id="confidenceDifference">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="comparison-row">
+
+                    <span>Risk</span>
+
+                    <div class="comparison-track">
+
+                        <div
+                            id="baselineRisk"
+                            class="baseline-risk-bar">
+                        </div>
+
+                        <div
+                            id="simulatedRisk"
+                            class="simulation-risk-bar">
+                        </div>
+
+                    </div>
+
+                    <strong id="riskDifference">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="comparison-row">
+
+                    <span>Impact</span>
+
+                    <div class="comparison-track">
+
+                        <div
+                            id="baselineImpact"
+                            class="baseline-impact-bar">
+                        </div>
+
+                        <div
+                            id="simulatedImpact"
+                            class="simulation-impact-bar">
+                        </div>
+
+                    </div>
+
+                    <strong id="impactDifference">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- COUNCIL RESPONSE -->
+
+            <div class="council-response">
+
+                <div class="response-heading">
+
+                    <div class="response-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+
+                    <div>
+                        <span class="section-label">
+                            COUNCIL RESPONSE
+                        </span>
+
+                        <h3>What changed?</h3>
+                    </div>
+
+                </div>
+
+                <p id="councilResponse">
+                    Adjust the scenario variables and run the simulation
+                    to see how the Council's decision landscape changes.
+                </p>
+
+            </div>
+
+
+            <!-- RECOMMENDATION -->
+
+            <div class="scenario-result" id="scenarioResult">
+
+                <div class="scenario-result-icon">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+
+                <div>
+
+                    <span class="section-label">
+                        SIMULATED OUTCOME
+                    </span>
+
+                    <h3 id="outcomeTitle">
+                        Baseline conditions are stable
+                    </h3>
+
+                    <p id="outcomeDescription">
+                        The current scenario does not introduce
+                        significant decision pressure.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SCENARIO HISTORY -->
+
+    <section class="history-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-label">
+                    SCENARIO MEMORY
+                </span>
+
+                <h2>Simulation History</h2>
+
+                <p>
+                    Previous what-if scenarios for this decision.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div id="simulationHistory" class="simulation-history">
+
+            <div class="empty-history">
+
+                <i class="fa-solid fa-flask"></i>
+
+                <span>
+                    No simulations have been run yet.
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- NEXT STEP -->
+
+    <section class="next-section">
+
+        <div class="next-icon">
+            <i class="fa-solid fa-brain"></i>
+        </div>
+
+        <div class="next-content">
+
+            <span class="section-label">
+                NEXT INTELLIGENCE LAYER
+            </span>
+
+            <h2>Store What the Council Learned</h2>
+
+            <p>
+                Save this decision, its assumptions, conflicts, and
+                simulated outcomes into Decision Memory.
+            </p>
+
+        </div>
+
+        <button id="memoryBtn" class="memory-button">
+
+            Open Decision Memory
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </button>
+
+    </section>
+
+</main>
+
+
+<script src="simulation.js"></script>
+
+</body>
+</html>

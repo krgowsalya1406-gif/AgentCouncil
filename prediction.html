@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgentCouncil | Prediction vs Reality</title>
+
+    <link rel="stylesheet" href="prediction.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="prediction-header">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <div class="brand-text">
+                <h1>AgentCouncil</h1>
+                <span>Decision Intelligence</span>
+            </div>
+
+        </div>
+
+
+        <div class="header-actions">
+
+            <div class="prediction-status">
+                <span class="status-dot"></span>
+                LEARNING ENGINE ACTIVE
+            </div>
+
+            <button
+                class="dashboard-button"
+                id="dashboardBtn"
+            >
+                <i class="fa-solid fa-table-columns"></i>
+                Dashboard
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="prediction-main">
+
+        <!-- INTRO -->
+        <section class="prediction-intro">
+
+            <div class="intro-badge">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                PREDICTION VS REALITY
+            </div>
+
+            <h2>
+                Learn From Every Decision
+            </h2>
+
+            <p>
+                Compare what the Council expected with what actually
+                happened and turn the difference into future learning.
+            </p>
+
+        </section>
+
+
+        <!-- PROBLEM -->
+        <section class="problem-card">
+
+            <div class="problem-top">
+
+                <div class="problem-icon">
+                    <i class="fa-solid fa-lightbulb"></i>
+                </div>
+
+                <div class="problem-info">
+
+                    <span class="section-label">
+                        DECISION UNDER REVIEW
+                    </span>
+
+                    <h3 id="problemTitle">
+                        Loading problem...
+                    </h3>
+
+                    <div class="problem-meta">
+
+                        <span
+                            class="type-badge"
+                            id="problemType"
+                        >
+                            General
+                        </span>
+
+                        <span
+                            class="status-badge"
+                            id="problemStatus"
+                        >
+                            Learning
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p
+                class="problem-description"
+                id="problemDescription"
+            >
+                Loading decision context...
+            </p>
+
+        </section>
+
+
+        <!-- OVERVIEW -->
+        <section class="overview-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-kicker">
+                        DECISION LEARNING
+                    </span>
+
+                    <h2>
+                        Prediction Accuracy Overview
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="overview-grid">
+
+                <!-- PREDICTED -->
+                <div class="overview-card">
+
+                    <div class="overview-card-top">
+
+                        <div class="overview-icon purple">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+
+                        <span>
+                            COUNCIL PREDICTION
+                        </span>
+
+                    </div>
+
+                    <strong id="predictedConfidence">
+                        82%
+                    </strong>
+
+                    <p>
+                        Expected decision confidence
+                    </p>
+
+                    <div class="mini-bar">
+                        <span
+                            id="predictedBar"
+                            style="width: 82%;"
+                        ></span>
+                    </div>
+
+                </div>
+
+
+                <!-- ACTUAL -->
+                <div class="overview-card">
+
+                    <div class="overview-card-top">
+
+                        <div class="overview-icon cyan">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+
+                        <span>
+                            ACTUAL OUTCOME
+                        </span>
+
+                    </div>
+
+                    <strong id="actualConfidence">
+                        --
+                    </strong>
+
+                    <p>
+                        Entered real-world result
+                    </p>
+
+                    <div class="mini-bar actual-bar">
+                        <span
+                            id="actualBar"
+                            style="width: 0%;"
+                        ></span>
+                    </div>
+
+                </div>
+
+
+                <!-- GAP -->
+                <div class="overview-card">
+
+                    <div class="overview-card-top">
+
+                        <div class="overview-icon orange">
+                            <i class="fa-solid fa-arrows-left-right"></i>
+                        </div>
+
+                        <span>
+                            PREDICTION GAP
+                        </span>
+
+                    </div>
+
+                    <strong id="predictionGap">
+                        --
+                    </strong>
+
+                    <p>
+                        Difference between prediction and reality
+                    </p>
+
+                    <div class="gap-indicator">
+                        <span id="gapLabel">
+                            Awaiting outcome
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMPARISON -->
+        <section class="comparison-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-kicker">
+                        OUTCOME COMPARISON
+                    </span>
+
+                    <h2>
+                        Expected vs Actual
+                    </h2>
+
+                    <p>
+                        Record what happened after the decision was made.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="comparison-card">
+
+                <div class="comparison-row">
+
+                    <div class="comparison-label">
+
+                        <div class="comparison-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <div>
+                            <strong>Risk</strong>
+                            <span>Expected risk level</span>
+                        </div>
+
+                    </div>
+
+                    <div class="comparison-values">
+
+                        <div>
+                            <small>Predicted</small>
+                            <strong id="predictedRisk">
+                                30%
+                            </strong>
+                        </div>
+
+                        <div class="arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+
+                        <div>
+                            <small>Actual</small>
+                            <strong id="actualRisk">
+                                --
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="comparison-row">
+
+                    <div class="comparison-label">
+
+                        <div class="comparison-icon">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+
+                        <div>
+                            <strong>Impact</strong>
+                            <span>Expected decision impact</span>
+                        </div>
+
+                    </div>
+
+                    <div class="comparison-values">
+
+                        <div>
+                            <small>Predicted</small>
+                            <strong id="predictedImpact">
+                                78%
+                            </strong>
+                        </div>
+
+                        <div class="arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+
+                        <div>
+                            <small>Actual</small>
+                            <strong id="actualImpact">
+                                --
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="comparison-row">
+
+                    <div class="comparison-label">
+
+                        <div class="comparison-icon">
+                            <i class="fa-solid fa-face-smile"></i>
+                        </div>
+
+                        <div>
+                            <strong>Outcome</strong>
+                            <span>Overall result</span>
+                        </div>
+
+                    </div>
+
+                    <div class="comparison-values outcome-values">
+
+                        <div>
+                            <small>Predicted</small>
+                            <strong id="predictedOutcome">
+                                Positive
+                            </strong>
+                        </div>
+
+                        <div class="arrow">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+
+                        <div>
+                            <small>Actual</small>
+                            <strong id="actualOutcome">
+                                --
+                            </strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTUAL OUTCOME FORM -->
+        <section class="outcome-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-kicker">
+                        REALITY INPUT
+                    </span>
+
+                    <h2>
+                        What Actually Happened?
+                    </h2>
+
+                    <p>
+                        Enter the observed outcome to improve future
+                        decision learning.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="outcome-form">
+
+                <div class="form-group">
+
+                    <label for="actualConfidenceInput">
+                        Actual Confidence
+                    </label>
+
+                    <div class="input-with-value">
+
+                        <input
+                            type="range"
+                            id="actualConfidenceInput"
+                            min="0"
+                            max="100"
+                            value="75"
+                        >
+
+                        <span id="actualConfidenceValue">
+                            75%
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="actualRiskInput">
+                        Actual Risk
+                    </label>
+
+                    <div class="input-with-value">
+
+                        <input
+                            type="range"
+                            id="actualRiskInput"
+                            min="0"
+                            max="100"
+                            value="25"
+                        >
+
+                        <span id="actualRiskValue">
+                            25%
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="actualImpactInput">
+                        Actual Impact
+                    </label>
+
+                    <div class="input-with-value">
+
+                        <input
+                            type="range"
+                            id="actualImpactInput"
+                            min="0"
+                            max="100"
+                            value="78"
+                        >
+
+                        <span id="actualImpactValue">
+                            78%
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="actualOutcomeInput">
+                        Actual Outcome
+                    </label>
+
+                    <select id="actualOutcomeInput">
+
+                        <option value="Positive">
+                            Positive
+                        </option>
+
+                        <option value="Partially Successful">
+                            Partially Successful
+                        </option>
+
+                        <option value="Neutral">
+                            Neutral
+                        </option>
+
+                        <option value="Negative">
+                            Negative
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group full-width">
+
+                    <label for="realityNotes">
+                        What did you learn?
+                    </label>
+
+                    <textarea
+                        id="realityNotes"
+                        rows="4"
+                        placeholder="Describe what happened, unexpected issues, successful factors, or lessons learned..."
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    class="analyze-button"
+                    id="analyzeOutcomeBtn"
+                >
+
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+
+                    Analyze Reality
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- LEARNING RESULT -->
+        <section
+            class="learning-result"
+            id="learningResult"
+        >
+
+            <div class="result-header">
+
+                <div class="result-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+
+                <div>
+
+                    <span class="section-kicker">
+                        LEARNING ENGINE
+                    </span>
+
+                    <h2>
+                        Decision Learning Result
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="accuracy-card">
+
+                <div class="accuracy-score">
+
+                    <span>
+                        Prediction Accuracy
+                    </span>
+
+                    <strong id="accuracyScore">
+                        --%
+                    </strong>
+
+                </div>
+
+                <div class="accuracy-progress">
+
+                    <div class="progress-track">
+
+                        <span
+                            id="accuracyBar"
+                            style="width: 0%;"
+                        ></span>
+
+                    </div>
+
+                    <p id="accuracyMessage">
+                        Analyze the actual outcome to calculate learning.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="learning-insights">
+
+                <div class="learning-insight">
+
+                    <div class="insight-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            WHAT WORKED
+                        </span>
+
+                        <p id="workedInsight">
+                            Awaiting outcome analysis.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="learning-insight">
+
+                    <div class="insight-icon">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            WHAT DIFFERED
+                        </span>
+
+                        <p id="differenceInsight">
+                            Awaiting outcome analysis.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="learning-insight">
+
+                    <div class="insight-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            FUTURE LEARNING
+                        </span>
+
+                        <p id="futureInsight">
+                            Awaiting outcome analysis.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- NEXT -->
+        <section class="next-section">
+
+            <div class="next-icon">
+                <i class="fa-solid fa-check-double"></i>
+            </div>
+
+            <div class="next-content">
+
+                <span class="section-kicker">
+                    FINAL STAGE
+                </span>
+
+                <h2>
+                    Decision Learning Complete
+                </h2>
+
+                <p>
+                    Review the decision history and preserve the learning
+                    generated by this decision cycle.
+                </p>
+
+            </div>
+
+            <button
+                class="history-button"
+                id="historyBtn"
+            >
+
+                Decision History
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- TOAST -->
+    <div
+        class="toast"
+        id="toast"
+    >
+
+        <div class="toast-icon">
+            <i class="fa-solid fa-check"></i>
+        </div>
+
+        <div class="toast-content">
+
+            <strong id="toastTitle">
+                Learning Updated
+            </strong>
+
+            <span id="toastMessage">
+                Decision learning has been saved.
+            </span>
+
+        </div>
+
+        <button id="closeToast">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+
+    <script src="prediction.js"></script>
+
+</body>
+</html>
