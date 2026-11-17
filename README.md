@@ -1,60 +1,81 @@
+
 # 🤖 AgentCouncil — AI-Powered Multi-Agent Platform
 
-\<p align="center">   
-<img src="[https://readme-typing-svg.demolab.com?font=Poppins&weight=800&size=30&duration=2800&pause=900&color=A78BFA&center=true&vCenter=true&width=850&lines=One+Question.+Multiple+AI+Perspectives.;Think+Together.+Decide+Smarter.;Where+Intelligent+Agents+Collaborate.;Better+Insights+Through+AI+Collaboration](https://readme-typing-svg.demolab.com?font=Poppins\&weight=800\&size=30\&duration=2800\&pause=900\&color=A78BFA\&center=true\&vCenter=true\&width=850\&lines=One+Question.+Multiple+AI+Perspectives.;Think+Together.+Decide+Smarter.;Where+Intelligent+Agents+Collaborate.;Better+Insights+Through+AI+Collaboration)." alt="AgentCouncil Animation"/> \</p>
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=800&size=30&duration=2800&pause=900&color=A78BFA&center=true&vCenter=true&width=850&lines=One+Question.+Multiple+AI+Perspectives.;Think+Together.+Decide+Smarter.;Where+Intelligent+Agents+Collaborate.;Better+Insights+Through+AI+Collaboration." alt="AgentCouncil Animation"/>
+</p>
 
-\<h2 align="center">✨ One Question. Multiple AI Minds. Smarter Decisions.\</h2>
+<h2 align="center">✨ One Question. Multiple AI Minds. Smarter Decisions.</h2>
 
-\<p align="center">   An intelligent platform that brings multiple AI agents together   to analyze problems, exchange perspectives, and generate meaningful insights. \</p>
+<p align="center">
+An intelligent platform that brings multiple AI agents together
+to analyze problems, exchange perspectives, and generate meaningful insights.
+</p>
 
-\<p align="center">   \<img src="[https://img.shields.io/badge/PROJECT-AgentCouncil-8B5CF6?style=for-the-badge](https://img.shields.io/badge/PROJECT-AgentCouncil-8B5CF6?style=for-the-badge)"/>   \<img src="[https://img.shields.io/badge/STATUS-Active-22C55E?style=for-the-badge](https://img.shields.io/badge/STATUS-Active-22C55E?style=for-the-badge)"/>   \<img src="[https://img.shields.io/badge/DOMAIN-Artificial%20Intelligence-EC4899?style=for-the-badge](https://img.shields.io/badge/DOMAIN-Artificial%20Intelligence-EC4899?style=for-the-badge)"/> \</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/PROJECT-AgentCouncil-8B5CF6?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/STATUS-Active-22C55E?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/DOMAIN-Multi--Agent%20AI-EC4899?style=for-the-badge"/>
+</p>
 
 ---
 
 ## 🌌 About AgentCouncil
 
-**What if solving a complex problem didn't depend on just one AI perspective?**
+**What if one question could bring multiple intelligent minds together?**
 
-Introducing **AgentCouncil** — where multiple intelligent agents come together to think, analyze, and collaborate.
+Introducing **AgentCouncil** — a collaborative AI platform designed to bring different intelligent perspectives into one place.
 
-AgentCouncil is an AI-powered multi-agent platform designed to explore different perspectives on a single question. Each specialized agent contributes its own analysis, allowing users to examine ideas from multiple viewpoints and gain more comprehensive insights.
+Instead of depending on a single AI response, AgentCouncil enables multiple specialized agents to analyze a question, contribute their viewpoints, and generate meaningful insights.
 
-Rather than relying on a single response, AgentCouncil brings collaborative intelligence into one unified workspace.
+It transforms individual AI interactions into a collaborative problem-solving experience.
 
 ### 🎯 Our Mission
 
-To transform the way people interact with artificial intelligence by making problem-solving more collaborative, insightful, and intelligent.
+To make artificial intelligence more collaborative, insightful, and useful by bringing multiple AI perspectives together.
 
 ---
 
 ## ✨ Explore the Platform
 
-| Module                  | Description                                        |
-| :---------------------- | :------------------------------------------------- |
-| 🔐 Account Access       | Create an account and securely access the platform |
-| 🏠 Dashboard            | Explore the AI workspace                           |
-| 💬 Ask Questions        | Submit questions and problems for analysis         |
-| 🤖 AI Agents            | Access specialized intelligent agents              |
-| 🧠 Agent Collaboration  | Bring multiple AI perspectives together            |
-| ⚖️ Response Comparison  | Examine different agent responses                  |
-| 📊 Decision Insights    | Explore generated insights and recommendations     |
-| 📜 Conversation History | Revisit previous AI interactions                   |
-| ⚙️ Account Settings     | Manage account information and preferences         |
-| 💡 Help & Support       | Find assistance and platform guidance              |
+| Module | Description |
+|:---|:---|
+| 🔐 Account Access | Register, log in, and manage your account |
+| 🏠 Dashboard | Access your personalized AI workspace |
+| 💬 Ask Questions | Submit questions and problems for analysis |
+| 🤖 AI Agents | Explore specialized intelligent agents |
+| 🧠 Agent Collaboration | Bring multiple AI perspectives together |
+| ⚖️ Response Comparison | Compare different agent responses |
+| 📊 Decision Insights | Explore generated insights and recommendations |
+| 📜 Conversation History | Revisit previous interactions |
+| ⚙️ Account Settings | Manage personal information and preferences |
+| 💡 Help & Support | Find assistance and guidance |
 
 ---
 
 ## 🎥 Project Demo
 
-\<p align="center">   \<a href="YOUR_DEMO_LINK">     \<img src="[https://img.shields.io/badge/▶\_WATCH_PROJECT_DEMO-FF0000?style=for-the-badge&logo=youtube&logoColor=white](https://img.shields.io/badge/▶_WATCH_PROJECT_DEMO-FF0000?style=for-the-badge\&logo=youtube\&logoColor=white)"/>   \</a> \</p>
+<p align="center">
+  <a href="YOUR_GOOGLE_DRIVE_DEMO_LINK">
+    <img src="https://img.shields.io/badge/▶_WATCH_PROJECT_DEMO-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Demo"/>
+  </a>
+</p>
 
 ## 🌐 Live Demo
 
-\<p align="center">   \<a href="YOUR_LIVE_DEMO_LINK">     \<img src="[https://img.shields.io/badge/🚀\_EXPLORE_AGENTCOUNCIL-8B5CF6?style=for-the-badge](https://img.shields.io/badge/🚀_EXPLORE_AGENTCOUNCIL-8B5CF6?style=for-the-badge)"/>   \</a> \</p>
+<p align="center">
+  <a href="YOUR_LIVE_DEMO_LINK">
+    <img src="https://img.shields.io/badge/🚀_EXPLORE_AGENTCOUNCIL-8B5CF6?style=for-the-badge" alt="Live Demo"/>
+  </a>
+</p>
 
 ## 💻 Source Code
 
-\<p align="center">   \<a href="YOUR_GITHUB_REPOSITORY_LINK">     \<img src="[https://img.shields.io/badge/VIEW_ON_GITHUB-24292F?style=for-the-badge&logo=github&logoColor=white](https://img.shields.io/badge/VIEW_ON_GITHUB-24292F?style=for-the-badge\&logo=github\&logoColor=white)"/>   \</a> \</p>
+<p align="center">
+  <a href="YOUR_GITHUB_REPOSITORY_LINK">
+    <img src="https://img.shields.io/badge/VIEW_ON_GITHUB-24292F?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
+</p>
 
 ---
 
@@ -62,164 +83,160 @@ To transform the way people interact with artificial intelligence by making prob
 
 ### 01. Welcome to AgentCouncil
 
-Where intelligent collaboration begins. Discover a modern workspace designed for multi-agent AI interactions.
+A modern starting point for exploring intelligent collaboration.
 
-\<p align="center">
-&#x20; \<img src="image/home.png" width="92%" alt="AgentCouncil Home"/>
-\</p>
+<p align="center">
+  <img src="image/home.png" width="92%" alt="AgentCouncil Home Page"/>
+</p>
 
 ### 02. Create Your Account
 
-Get started with a simple and user-friendly registration experience.
+A simple registration experience to get started.
 
-\<p align="center">
-&#x20; \<img src="image/register.png" width="88%" alt="Registration"/>
-\</p>
+<p align="center">
+  <img src="image/register.png" width="88%" alt="Registration Page"/>
+</p>
 
 ### 03. Your Intelligent Dashboard
 
-A centralized workspace to explore platform features and manage AI interactions.
+A centralized workspace to access platform features and AI activities.
 
-\<p align="center">
-&#x20; \<img src="image/dashboard.png" width="92%" alt="Dashboard"/>
-\</p>
+<p align="center">
+  <img src="image/dashboard.png" width="92%" alt="Dashboard"/>
+</p>
 
 ### 04. Ask Your Question
 
-Submit a question, explore an idea, or describe a problem you want AI agents to analyze.
+Submit a question, describe a problem, or explore an idea.
 
-\<p align="center">
-&#x20; \<img src="image/question.png" width="92%" alt="Ask Question"/>
-\</p>
+<p align="center">
+  <img src="image/question.png" width="92%" alt="Ask Question"/>
+</p>
 
-### 05. Meet the AI Agents
+### 05. Meet Your AI Agents
 
-Discover specialized agents designed to contribute different perspectives and approaches.
+Explore specialized agents that contribute different perspectives.
 
-\<p align="center">
-&#x20; \<img src="image/agents.png" width="92%" alt="AI Agents"/>
-\</p>
+<p align="center">
+  <img src="image/agents.png" width="92%" alt="AI Agents"/>
+</p>
 
 ### 06. The Power of Collaboration
 
-Multiple AI agents work together to explore the question from different viewpoints.
+Bring multiple AI perspectives together to analyze a problem.
 
-\<p align="center">
-&#x20; \<img src="image/collaboration.png" width="92%" alt="Agent Collaboration"/>
-\</p>
+<p align="center">
+  <img src="image/collaboration.png" width="92%" alt="Agent Collaboration"/>
+</p>
 
 ### 07. Explore Agent Responses
 
-View and compare the responses generated by different agents.
+Review the responses generated by different agents.
 
-\<p align="center">
-&#x20; \<img src="image/responses.png" width="92%" alt="Agent Responses"/>
-\</p>
+<p align="center">
+  <img src="image/responses.png" width="92%" alt="Agent Responses"/>
+</p>
 
-### 08. From Analysis to Insights
+### 08. Turn Insights Into Decisions
 
-Explore the generated insights and recommendations to support better decisions.
+Explore the analysis and recommendations generated by the platform.
 
-\<p align="center">
-&#x20; \<img src="image/decision.png" width="92%" alt="Decision Insights"/>
-\</p>
+<p align="center">
+  <img src="image/decision.png" width="92%" alt="Decision Insights"/>
+</p>
 
-### 09. Your Conversation Journey
+### 09. Your Conversation History
 
-Keep track of previous discussions and revisit your AI interactions.
+Revisit previous questions and AI interactions.
 
-\<p align="center">
-&#x20; \<img src="image/history.png" width="88%" alt="Conversation History"/>
-\</p>
+<p align="center">
+  <img src="image/history.png" width="88%" alt="Conversation History"/>
+</p>
 
-### 10. Personalize Your Experience
+### 10. Manage Your Account
 
-Manage your profile and customize your account preferences.
+Update personal details and customize account preferences.
 
-\<p align="center">
-&#x20; \<img src="image/settings.png" width="88%" alt="Account Settings"/>
-\</p>
+<p align="center">
+  <img src="image/settings.png" width="88%" alt="Account Settings"/>
+</p>
 
 ---
 
 ## 💫 The AgentCouncil Experience
 
-\<div align="center">
+<div align="center">
 
-|        🧠 THINK        |     🤝 COLLABORATE    |        ⚖️ COMPARE       |
-| :--------------------: | :-------------------: | :---------------------: |
-| Understand the problem | Bring agents together | Explore different views |
+| 🧠 THINK | 🤝 COLLABORATE | ⚖️ COMPARE |
+|:---:|:---:|:---:|
+| Understand the problem | Bring agents together | Explore perspectives |
 
-|      🔍 ANALYZE      |    💡 GENERATE    |        🚀 DECIDE        |
-| :------------------: | :---------------: | :---------------------: |
-| Examine perspectives | Discover insights | Make informed decisions |
+| 🔍 ANALYZE | 💡 GENERATE | 🚀 DECIDE |
+|:---:|:---:|:---:|
+| Examine responses | Discover insights | Make informed decisions |
 
-\</div>
+</div>
 
 ---
 
 ## 🛠️ Technology Stack
 
-\<div align="center">
+<div align="center">
 
-### The technologies behind intelligent collaboration
+### Built with modern technologies
 
-\<img src="[https://skillicons.dev/icons?i=html,css,js,python,react,nodejs,vscode,git,github](https://skillicons.dev/icons?i=html,css,js,python,react,nodejs,vscode,git,github)" />
+<img src="https://skillicons.dev/icons?i=html,css,js,python,react,nodejs,vscode,git,github" alt="Technology Stack"/>
 
-\</div>
+</div>
 
-| Technology    | Purpose                                |
-| :------------ | :------------------------------------- |
-| HTML5         | Structure of the application           |
-| CSS3          | Styling and responsive layouts         |
-| JavaScript    | Interactive functionality              |
-| Python        | Backend and AI processing              |
-| React         | Component-based UI (if used)           |
-| Node.js       | Server-side functionality (if used)    |
-| AI / LLM APIs | Intelligent response generation        |
-| Git & GitHub  | Version control and project management |
-
-*Keep only the technologies actually used in your implementation.*
+| Technology | Purpose |
+|:---|:---|
+| HTML5 | Application structure |
+| CSS3 | Styling and responsive layouts |
+| JavaScript | Interactive functionality |
+| Python | Backend and AI processing |
+| React | User interface (if used) |
+| Node.js | Server-side functionality (if used) |
+| AI / LLM APIs | Intelligent response generation |
+| Git & GitHub | Version control |
 
 ---
 
 ## 🔄 How AgentCouncil Works
 
-\<div align="center">
-
 ```text
-             START
-               |
-               ▼
-         ASK A QUESTION
-               |
-               ▼
-        UNDERSTAND INPUT
-               |
-               ▼
-       ACTIVATE AI AGENTS
-               |
-       ┌───────┼───────┐
-       ▼       ▼       ▼
-    AGENT 1 AGENT 2 AGENT 3
-       |       |       |
-       ▼       ▼       ▼
-    ANALYZE ANALYZE ANALYZE
-       |       |       |
-       └───────┼───────┘
-               ▼
-       COMPARE RESPONSES
-               |
-               ▼
-        GENERATE INSIGHTS
-               |
-               ▼
-         FINAL OUTPUT
+              START
+                |
+                ▼
+          ASK A QUESTION
+                |
+                ▼
+         PROCESS USER INPUT
+                |
+                ▼
+        ACTIVATE AI AGENTS
+                |
+        ┌───────┼───────┐
+        ▼       ▼       ▼
+     AGENT 1 AGENT 2 AGENT 3
+        |       |       |
+        ▼       ▼       ▼
+      ANALYZE ANALYZE ANALYZE
+        |       |       |
+        └───────┼───────┘
+                ▼
+        COMPARE RESPONSES
+                |
+                ▼
+         GENERATE INSIGHTS
+                |
+                ▼
+           FINAL OUTPUT
 ```
 
-**Different minds. Shared intelligence. Better possibilities.**
-
-\</div>
+<p align="center">
+<strong>Different perspectives. Shared intelligence. Better possibilities.</strong>
+</p>
 
 ---
 
@@ -267,20 +284,18 @@ AgentCouncil/
 └── README.md
 ```
 
-*Replace the example files with your actual repository structure.*
+*Replace the example structure with your actual project files.*
 
 ---
 
 ## 🔮 What's Coming Next?
-
-The future of AgentCouncil is about making AI collaboration even more powerful.
 
 - 🤖 Dynamic AI agent selection
 - 🧠 Advanced multi-agent reasoning
 - ⚖️ Intelligent response evaluation
 - 📊 Interactive decision analytics
 - 💬 Context-aware conversations
-- 📄 Downloadable AI reports
+- 📄 Downloadable AI-generated reports
 - 🌐 Multilingual AI support
 - 🔗 Integration with additional AI models
 - 📈 Improved collaboration and performance
@@ -289,9 +304,9 @@ The future of AgentCouncil is about making AI collaboration even more powerful.
 
 ## 👩‍💻 Meet the Developer
 
-\<div align="center">
+<div align="center">
 
-\<img src="[https://readme-typing-svg.demolab.com?font=Poppins&weight=800&size=30&duration=2500&pause=1000&color=A78BFA&center=true&vCenter=true&width=650&lines=Gowsalya+K.R+%F0%9F%91%8B](https://readme-typing-svg.demolab.com?font=Poppins\&weight=800\&size=30\&duration=2500\&pause=1000\&color=A78BFA\&center=true\&vCenter=true\&width=650\&lines=Gowsalya+K.R+%F0%9F%91%8B)" alt="Developer"/>
+<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=800&size=30&duration=2500&pause=1000&color=A78BFA&center=true&vCenter=true&width=650&lines=Gowsalya+K.R+%F0%9F%91%8B" alt="Developer Name"/>
 
 **Computer Science & Engineering Student**
 
@@ -299,11 +314,11 @@ Frontend Developer | AI/ML Enthusiast | Full Stack Development Enthusiast
 
 Building intelligent digital experiences through creativity, innovation, and code.
 
-\</div>
+</div>
 
 ---
 
-\<div align="center">
+<div align="center">
 
 ### 💜 ONE QUESTION. MANY PERSPECTIVES. INFINITE POSSIBILITIES.
 
@@ -311,6 +326,6 @@ Building intelligent digital experiences through creativity, innovation, and cod
 
 *Where intelligent agents collaborate to create better insights.*
 
-\<img src="[https://capsule-render.vercel.app/api?type=waving&color=8B5CF6&height=130&section=footer](https://capsule-render.vercel.app/api?type=waving\&color=8B5CF6\&height=130\&section=footer)" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=8B5CF6&height=130&section=footer" width="100%" alt="Purple Footer"/>
 
-\</div>
+</div>
