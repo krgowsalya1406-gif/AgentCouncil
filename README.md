@@ -64,7 +64,7 @@ To make artificial intelligence more collaborative, insightful, and useful by br
 ## 🌐 Live Demo
 
 <p align="center">
-  <a href="YOUR_LIVE_DEMO_LINK">
+  <a href="https://hilarious-eclair-a7fb9e.netlify.app">
     <img src="https://img.shields.io/badge/🚀_EXPLORE_AGENTCOUNCIL-8B5CF6?style=for-the-badge" alt="Live Demo"/>
   </a>
 </p>
