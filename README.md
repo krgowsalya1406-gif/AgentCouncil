@@ -1,6 +1,7 @@
 # 🤖 AgentCouncil — AI-Powered Multi-Agent Platform
 
-\<p align="center">   \<img src="[https://readme-typing-svg.demolab.com?font=Poppins&weight=800&size=30&duration=2800&pause=900&color=A78BFA&center=true&vCenter=true&width=850&lines=One+Question.+Multiple+AI+Perspectives.;Think+Together.+Decide+Smarter.;Where+Intelligent+Agents+Collaborate.;Better+Insights+Through+AI+Collaboration](https://readme-typing-svg.demolab.com?font=Poppins\&weight=800\&size=30\&duration=2800\&pause=900\&color=A78BFA\&center=true\&vCenter=true\&width=850\&lines=One+Question.+Multiple+AI+Perspectives.;Think+Together.+Decide+Smarter.;Where+Intelligent+Agents+Collaborate.;Better+Insights+Through+AI+Collaboration)." alt="AgentCouncil Animation"/> \</p>
+\<p align="center">   
+<img src="[https://readme-typing-svg.demolab.com?font=Poppins&weight=800&size=30&duration=2800&pause=900&color=A78BFA&center=true&vCenter=true&width=850&lines=One+Question.+Multiple+AI+Perspectives.;Think+Together.+Decide+Smarter.;Where+Intelligent+Agents+Collaborate.;Better+Insights+Through+AI+Collaboration](https://readme-typing-svg.demolab.com?font=Poppins\&weight=800\&size=30\&duration=2800\&pause=900\&color=A78BFA\&center=true\&vCenter=true\&width=850\&lines=One+Question.+Multiple+AI+Perspectives.;Think+Together.+Decide+Smarter.;Where+Intelligent+Agents+Collaborate.;Better+Insights+Through+AI+Collaboration)." alt="AgentCouncil Animation"/> \</p>
 
 \<h2 align="center">✨ One Question. Multiple AI Minds. Smarter Decisions.\</h2>
 
