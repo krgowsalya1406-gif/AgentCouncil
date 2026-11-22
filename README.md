@@ -194,10 +194,6 @@ Update personal details and customize account preferences.
 | HTML5 | Application structure |
 | CSS3 | Styling and responsive layouts |
 | JavaScript | Interactive functionality |
-| Python | Backend and AI processing |
-| React | User interface (if used) |
-| Node.js | Server-side functionality (if used) |
-| AI / LLM APIs | Intelligent response generation |
 | Git & GitHub | Version control |
 
 ---
