@@ -185,7 +185,7 @@ Update personal details and customize account preferences.
 
 ### Built with modern technologies
 
-<img src="https://skillicons.dev/icons?i=html,css,js,python,react,nodejs,vscode,git,github" alt="Technology Stack"/>
+<img src="https://skillicons.dev/icons?i=html,css,js,vscode,git,github" alt="Technology Stack"/>
 
 </div>
 
