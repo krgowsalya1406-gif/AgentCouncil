@@ -82,15 +82,6 @@ To make artificial intelligence more collaborative, insightful, and useful by br
 
 
 
-A centralized workspace to access platform features and AI activities.
-
-<p align="center">
-  <img src="image/dashboard.png" width="92%" alt="Dashboard"/>
-</p>
-
-### 04. Ask Your Question
-
-Submit a question, describe a problem, or explore an idea.
 
 <p align="center">
   <img src="image/question.png" width="92%" alt="Ask Question"/>
