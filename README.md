@@ -280,7 +280,7 @@ AgentCouncil/
 └── README.md
 ```
 
-*Replace the example structure with your actual project files.*
+
 
 ---
 
