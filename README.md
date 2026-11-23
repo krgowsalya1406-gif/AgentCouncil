@@ -79,15 +79,7 @@ To make artificial intelligence more collaborative, insightful, and useful by br
 
 ---
 
-## 🖼️ A Visual Tour of AgentCouncil
 
-### 01. Welcome to AgentCouncil
-
-A modern starting point for exploring intelligent collaboration.
-
-<p align="center">
-  <img src="image/home.png" width="92%" alt="AgentCouncil Home Page"/>
-</p>
 
 ### 02. Create Your Account
 
