@@ -28,7 +28,7 @@ Introducing **AgentCouncil** — a collaborative AI platform designed to bring d
 
 Instead of depending on a single AI response, AgentCouncil enables multiple specialized agents to analyze a question, contribute their viewpoints, and generate meaningful insights.
 
-It transforms individual AI interactions into a collaborative problem-solving experience.
+It transforms individual AI interactions into a collaborative problem-solving experience
 
 ### 🎯 Our Mission
 
