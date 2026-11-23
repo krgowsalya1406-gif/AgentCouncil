@@ -81,15 +81,6 @@ To make artificial intelligence more collaborative, insightful, and useful by br
 
 
 
-### 02. Create Your Account
-
-A simple registration experience to get started.
-
-<p align="center">
-  <img src="image/register.png" width="88%" alt="Registration Page"/>
-</p>
-
-### 03. Your Intelligent Dashboard
 
 A centralized workspace to access platform features and AI activities.
 
