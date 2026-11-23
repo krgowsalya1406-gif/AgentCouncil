@@ -83,17 +83,6 @@ To make artificial intelligence more collaborative, insightful, and useful by br
 
 
 
-<p align="center">
-  <img src="image/question.png" width="92%" alt="Ask Question"/>
-</p>
-
-### 05. Meet Your AI Agents
-
-Explore specialized agents that contribute different perspectives.
-
-<p align="center">
-  <img src="image/agents.png" width="92%" alt="AI Agents"/>
-</p>
 
 ### 06. The Power of Collaboration
 
