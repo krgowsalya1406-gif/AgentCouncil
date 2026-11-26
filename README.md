@@ -86,16 +86,7 @@ To make artificial intelligence more collaborative, insightful, and useful by br
 
 
 
- rsation History
-
-Revisit previous questions and AI interactions.
-
-<p align="center">
-  <img src="image/history.png" width="88%" alt="Conversation History"/>
-</p>
-
-### 10. Manage Your Account
-
+ 
 Update personal details and customize account preferences.
 
 <p align="center">
