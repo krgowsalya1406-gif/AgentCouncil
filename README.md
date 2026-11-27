@@ -87,13 +87,7 @@ To make artificial intelligence more collaborative, insightful, and useful by br
 
 
  
-Update personal details and customize account preferences.
 
-<p align="center">
-  <img src="image/settings.png" width="88%" alt="Account Settings"/>
-</p>
-
----
 
 ## 💫 The AgentCouncil Experience
 
