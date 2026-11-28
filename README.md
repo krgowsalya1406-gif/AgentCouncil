@@ -232,7 +232,6 @@ AgentCouncil/
 
 **Computer Science & Engineering Student**
 
-Frontend Developer | AI/ML Enthusiast | Full Stack Development Enthusiast
 
 Building intelligent digital experiences through creativity, innovation, and code.
 
